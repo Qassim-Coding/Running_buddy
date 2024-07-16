@@ -1,2 +1,7 @@
 <h1>Pages#dashboard</h1>
 <p>Find me in app/views/pages/dashboard.html.erb</p>
+
+<% @meetings.each do |meeting| %>
+  <p><%= meeting.date %></p>
+
+<% end %>

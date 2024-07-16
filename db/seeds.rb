@@ -1,3 +1,11 @@
+puts "Destroying all relationships..."
+Relationship.destroy_all
+
+puts "Destroying all meetings..."
+Meeting.destroy_all
+
+puts "Destroying all users..."
+User.destroy_all
 
 User.create!(
   email: "john.doe@example.com",
@@ -52,3 +60,24 @@ User.create!(
   phone_number: "555-123-4567",
   running_pace: 8.0
 )
+
+Meeting.create!(
+  date: Date.new(2021, 6, 1),
+  location: "Central Park",
+  weather_report: "Sunny",
+  user: User.first
+)
+
+Relationship.create!(
+  status: true,
+  asker: User.first,
+  receiver: User.second
+)
+
+Message.create!(
+  content: "Hi, I'm interested in joining your running group.",
+  user: User.third,
+  relationship: Relationship.first
+)
+
+puts "Seeding complete!"
