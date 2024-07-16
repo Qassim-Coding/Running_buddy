@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'relationships/new'
+  get 'relationships/create'
   get 'meetings/index'
   devise_for :users
   root to: "pages#home"
