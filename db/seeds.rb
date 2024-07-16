@@ -1,4 +1,6 @@
-
+puts "destruction des users"
+User.destroy_all
+puts "creation des users"
 User.create!(
   email: "john.doe@example.com",
   password: '123456', # Spécifiez le mot de passe ici
@@ -52,3 +54,4 @@ User.create!(
   phone_number: "555-123-4567",
   running_pace: 8.0
 )
+puts "creation terminée"

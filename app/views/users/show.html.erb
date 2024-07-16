@@ -1,16 +1,19 @@
-<<<<<<< HEAD
 <h1><%= @user.last_name %></h1>
 
 <ul>
   <% @other_users.each do |user| %>
     <li>
     <%= user %>
+    <%= simple_form_for Relationship.new do |f| %>
+    <div class="d-none">
+    <%= f.input :receiver_id, input_html: {value: user.id}%>
+    </div>
+    <%= f.button :submit, class: "btn btn-primary"%>
+    <% end %>
+
+
     </li>
 
   <% end %>
 
 </ul>
-=======
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
->>>>>>> master

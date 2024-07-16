@@ -1,11 +1,11 @@
 class RelationshipsController < ApplicationController
-  def new
-    @relationship = Relationship.new
-  end
 
   def create
-    @relationship = Relationship.new(relationship_params)
+    @relationship = Relationship.new
     @relationship.asker = current_user
-    @relationship.receiver = other_user
+    @relationship.receiver = User.find(params[:relationship][:receiver_id])
+    @relationship.status = "pending"
+    raise
+
   end
 end
