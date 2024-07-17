@@ -5,7 +5,5 @@ class RelationshipsController < ApplicationController
     @relationship.asker = current_user
     @relationship.receiver = User.find(params[:relationship][:receiver_id])
     @relationship.status = "pending"
-    raise
-
   end
 end

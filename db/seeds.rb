@@ -1,4 +1,5 @@
 puts " deleting messages"
+puts "Destroying all messages..."
 Message.destroy_all
 
 puts "Destroying all relationships..."
