@@ -4,7 +4,7 @@ class SearchesController < ApplicationController
 # logique de la méthode : affiche les users dont le nom ou le rythme de course correspond à la recherche.
     @users = User.all
     if params[:query].present?
-      sql_subquery = "last_name ILIKE :query OR first_name ILIKE :query"
+      sql_subquery = "last_name ILIKE :query OR first_name ILIKE :query OR address ILIKE :query"
       @users = @users.where(sql_subquery, query: "%#{params[:query]}%")
     end
   end
