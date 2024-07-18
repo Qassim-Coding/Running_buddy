@@ -20,19 +20,20 @@ puts "creating users"
 User.create!(
   email: "john.doe@example.com",
   password: '123456',
-  
   last_name: "Doe",
   first_name: "John",
-  address: "123 Rue des jardins, Fontenay-le-Fleury, France",
+  address: "43 Avenue thiers, Melun, France",
   picture: "https://example.com/johndoe.jpg",
   description: "Experienced runner looking for training partners.",
   phone_number: "123-456-7890",
   running_pace: 6.5,
   next_official_running_event: "City Marathon",
-  preparation: "Currently following a strict training schedule.",
+  preparation: "Yes",
   how_long_have_you_been_running: "5 years",
   run_frequency: 4,
-  other_sport: "Cycling"
+  other_sport: "Cycling",
+  preference_date: "Monday, Sathurday",
+  preference_hour: 6
 )
 
 User.create!(
@@ -46,16 +47,18 @@ User.create!(
   updated_at: Time.now,
   last_name: "Smith",
   first_name: "Jane",
-  address: "456 Avenue des graines, Lille, France",
+  address: "456 Avenue des graines, Cesson, France",
   picture: "https://example.com/janesmith.jpg",
   description: "Marathon runner looking to improve my pace.",
   phone_number: "987-654-3210",
   running_pace: 7.0,
   next_official_running_event: "Half Marathon",
-  preparation: "Training with a coach.",
+  preparation: "Yes",
   how_long_have_you_been_running: "3 years",
   run_frequency: 5,
-  other_sport: "Swimming"
+  other_sport: "Swimming",
+  preference_date: "Saturday, Sunday",
+  preference_hour: 6
 )
 
 User.create!(
@@ -69,16 +72,18 @@ User.create!(
   updated_at: Time.now,
   last_name: "Brown",
   first_name: "Sam",
-  address: "789 Avenue des palmiers, Bayonne, France",
+  address: "789 Avenue des palmiers, Fontainebleau, France",
   picture: "https://example.com/sambrown.jpg",
   description: "New to running, looking for a group to join.",
   phone_number: "555-123-4567",
   running_pace: 8.0,
   next_official_running_event: "5K Fun Run",
-  preparation: "Starting with basic running plans.",
+  preparation: "Yes",
   how_long_have_you_been_running: "6 months",
   run_frequency: 3,
-  other_sport: "Yoga"
+  other_sport: "Yoga",
+  preference_date: "Monday, Friday",
+  preference_hour: 6
 )
 
 User.create!(
@@ -92,16 +97,18 @@ User.create!(
   updated_at: Time.now,
   last_name: "Stravami",
   first_name: "Alain",
-  address: "34 Boulevard Saint-Germain, Paris, France",
+  address: "34 Boulevard Saint-Germain, Melun, France",
   picture: "https://example.com/alainstravami.jpg",
   description: "Passionate runner aiming to compete in marathons.",
   phone_number: "+33 1 23 45 67 89",
   running_pace: 5.5,
   next_official_running_event: "Paris Marathon",
-  preparation: "Following a marathon training plan.",
+  preparation: "Yes",
   how_long_have_you_been_running: "8 years",
   run_frequency: 6,
-  other_sport: "Tennis, Football"
+  other_sport: "Tennis, Football",
+  preference_date: "Friday, Wednesday",
+  preference_hour: 6
 )
 
 User.create!(
@@ -115,16 +122,18 @@ User.create!(
   updated_at: Time.now,
   last_name: "Bouchard",
   first_name: "Amelie",
-  address: "22 Rue de Rivoli, Paris, France",
+  address: "22 Rue de Rivoli, Melun, France",
   picture: "https://example.com/ameliebouchard.jpg",
   description: "Trail runner seeking new challenges.",
   phone_number: "+33 1 23 45 67 89",
   running_pace: 5.4,
   next_official_running_event: "Paris Half Marathon",
-  preparation: "Intensive trail running sessions.",
+  preparation: "Yes",
   how_long_have_you_been_running: "6 years",
   run_frequency: 5,
-  other_sport: "Climbing"
+  other_sport: "Climbing",
+  preference_date: "Monday, Friday",
+  preference_hour: 6
 )
 
 User.create!(
@@ -138,16 +147,18 @@ User.create!(
   updated_at: Time.now,
   last_name: "Martin",
   first_name: "Antoine",
-  address: "33 Rue de la République, Lyon, France",
+  address: "33 Rue de la République, Le mée sur seine, France",
   picture: "https://example.com/antoinemartin.jpg",
   description: "Sprinter looking to improve speed.",
   phone_number: "+33 4 78 42 12 34",
   running_pace: 5.6,
   next_official_running_event: "Lyon Sprint Meet",
-  preparation: "Speed drills and interval training.",
+  preparation: "Yes",
   how_long_have_you_been_running: "4 years",
   run_frequency: 4,
-  other_sport: "Basketball"
+  other_sport: "Basketball",
+  preference_date: "Monday, Saturday",
+  preference_hour: 8
 )
 
 User.create!(
@@ -161,16 +172,20 @@ User.create!(
   updated_at: Time.now,
   last_name: "Dubois",
   first_name: "Lucie",
-  address: "12 Rue Sainte-Catherine, Bordeaux, France",
+  address: "12 Rue Sainte-Catherine, Boissise, France",
   picture: "https://example.com/luciedubois.jpg",
   description: "Fitness enthusiast new to running.",
   phone_number: "+33 5 56 01 23 45",
   running_pace: 5.7,
   next_official_running_event: "Bordeaux 10K",
-  preparation: "General fitness training.",
+  preparation: "Yes",
   how_long_have_you_been_running: "1 year",
   run_frequency: 3,
-  other_sport: "Pilates"
+  other_sport: "Pilates",
+  preference_date: "Saturday, Sunday",
+  preference_hour: 6,
+  relationship_number: 1,
+  meeting_number: 1
 )
 
 User.create!(
@@ -184,16 +199,20 @@ User.create!(
   updated_at: Time.now,
   last_name: "Leblanc",
   first_name: "Killian",
-  address: "45 Rue Paradis, Marseille, France",
+  address: "45 Rue Paradis, Livry, France",
   picture: "https://example.com/killianleblanc.jpg",
   description: "Casual runner aiming to complete a marathon.",
   phone_number: "+33 4 91 23 45 67",
   running_pace: 5.8,
   next_official_running_event: "Marseille Marathon",
-  preparation: "Long distance training.",
+  preparation: "Yes",
   how_long_have_you_been_running: "3 years",
   run_frequency: 4,
-  other_sport: "Soccer"
+  other_sport: "Soccer",
+  preference_date: "Wednesday, Sunday ",
+  preference_hour: 6,
+  relationship_number: 2,
+  meeting_number: 2
 )
 
 User.create!(
@@ -213,10 +232,14 @@ User.create!(
   phone_number: "+33 4 78 34 56 78",
   running_pace: 5.9,
   next_official_running_event: "Lyon Half Marathon",
-  preparation: "High intensity interval training.",
+  preparation: "Yes",
   how_long_have_you_been_running: "5 years",
   run_frequency: 5,
-  other_sport: "Swimming"
+  other_sport: "Swimming",
+  preference_date: "Monday, Friday",
+  preference_hour: 6,
+  relationship_number: 1,
+  meeting_number: 1
 )
 
 User.create!(
@@ -239,7 +262,12 @@ User.create!(
   preparation: "Beginner running programs.",
   how_long_have_you_been_running: "6 months",
   run_frequency: 3,
-  other_sport: "Yoga"
+  other_sport: "Yoga",
+  preference_date: "Monday, Wednesday",
+  preference_hour: 6,
+  relationship_number: 1,
+  meeting_number: 1
+
 )
 
 User.create!(
@@ -262,7 +290,11 @@ User.create!(
   preparation: "Marathon-specific training plans.",
   how_long_have_you_been_running: "10 years",
   run_frequency: 6,
-  other_sport: "Cycling"
+  other_sport: "Cycling",
+  preference_date: "Monday, Wednesday",
+  preference_hour: 6,
+  relationship_number: 2,
+  meeting_number: 2
 )
 puts "end of creating users"
 Meeting.create!(
