@@ -1,6 +1,7 @@
 class SearchesController < ApplicationController
   def search
     @users = User.all
+    @user = current_user
     if params[:query].present?
       query = params[:query]
       # Convertir la requête en nombre si possible
