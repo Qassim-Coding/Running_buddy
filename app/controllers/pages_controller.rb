@@ -10,6 +10,5 @@ class PagesController < ApplicationController
     @meetings = Meeting.where(user_id: @user.id)
     # l'utilisateur connecté peut voir ses relations
     @relationships = Relationship.where(asker_id: @user.id)
-
   end
 end
