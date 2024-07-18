@@ -1,6 +1,7 @@
 class RelationshipsController < ApplicationController
 
   def show
+    @user = current_user
     @relationship = Relationship.find(params[:id])
   end
 
