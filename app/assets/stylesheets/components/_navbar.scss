@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 5px 10px;
-  height: 100px;
+  height: 70px;
 }
 
 .header nav {
@@ -21,8 +21,9 @@ align-items: center;
 }
 
 .header .logo-img {
-width: 40px;
-height: auto;
+width: 35%;
+height: 18%;
+margin-left: 30px;
 }
 .header .search-bar {
   width: 40%;
@@ -63,6 +64,6 @@ gap: 15px;
 }
 
 .header .icons img {
-width: 48px;
-height: 48px;
+width: 25%;
+height: 25%;
 }
