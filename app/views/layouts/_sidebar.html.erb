@@ -2,7 +2,7 @@
 <div class="sidebar">
   <div class="sidebar-header">
     <%= image_tag "janesmith.jpg.jpg", class: "avatar" %>
-    <h3><%= "#{@user.first_name} #{@user.last_name}" %></h3>
+    <h3><%= "#{@user.first_name} #{@user.last_name.upcase}" %></h3>
   </div>
   <ul class="sidebar-details">
     <li>
@@ -13,10 +13,10 @@
     </li>
     <li>
       <%= image_tag "pace.png", class: "icon" %>
-      <%= @user.running_pace %>/km
     </li>
     <li>
       <%= image_tag "day.png", class: "icon" %>
+
     </li>
     <li>
       <%= image_tag "hour.png", class: "icon" %>

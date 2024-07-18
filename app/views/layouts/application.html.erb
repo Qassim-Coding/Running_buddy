@@ -16,11 +16,13 @@
     <% end %>
 
 
-    <% unless request.path == root_path %>
+    <% unless request.path == root_path || request.path == user_session_path %>
       <%= render "layouts/sidebar" %>
     <% end %>
 
     <%= render "shared/flashes" %>
-    <%= yield %>
+    <div class="margin-sidebar">
+      <%= yield %>
+    </div>
   </body>
 </html>
