@@ -11,7 +11,9 @@
   </head>
 
   <body>
-    <%= render "layouts/navbar" %>
+    <% unless request.path == root_path %>
+      <%= render "layouts/navbar" %>
+    <% end %>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
