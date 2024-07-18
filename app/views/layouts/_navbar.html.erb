@@ -1,10 +1,9 @@
 <header class="header">
   <nav>
-    <div class="logo">
       <%# <%= link_to root_path do %>
-        <%= image_tag 'logofinal.png', class: 'logo-img', style: 'width: 25%; height: 18%;' %>
+        <%= image_tag 'logofinal.png', class: 'logo-img' %>
       <%#   <% end %>
-    </div>
+
     <div class="search-bar">
       <%= form_with url: search_path, method: :get, local: true do |form| %>
         <%= form.text_field :query, placeholder: 'Search...', class: 'search-input' %>
