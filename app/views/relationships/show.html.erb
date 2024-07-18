@@ -1,0 +1,21 @@
+<!-- app/views/chatrooms/show.html.erb -->
+<div class="container chatroom" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @relationship.id %>">
+  <h1>#<%= %></h1>
+
+  <div class="messages" data-chatroom-subscription-target="messages">
+    <% @relationship.messages.each do |message| %>
+      <%= render "messages/message", message: message %>
+    <% end %>
+  </div>
+</div>
+
+
+
+<%= simple_form_for [@relationship, Message.new],  html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex" } do |f| %>
+    <div class="form-group">
+      <%= f.input :content, class: 'form-control', placeholder: 'Write your message here...' %>
+    </div>
+
+    <%= f.submit 'Send message!', class: 'btn btn-primary' %>
+
+<% end %>
