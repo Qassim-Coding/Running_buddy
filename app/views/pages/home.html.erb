@@ -1,4 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%# <h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p> %>
 
-<%= link_to "Dashboard", dashboard_path %>
+
+<div class="banner py-4" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path('banner.jpg') %>'); background-repeat: no-repeat; height: 850px; background-size: cover; background-position: center; color: white;">
+</div>
+ <%= link_to "Join", dashboard_path , class: "btn btn-light rounded-3 " %>
