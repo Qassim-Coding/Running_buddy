@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_18_071331) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_18_154759) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -92,6 +92,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_18_071331) do
     t.string "how_long_have_you_been_running"
     t.integer "run_frequency"
     t.text "other_sport"
+    t.string "preference_date"
+    t.integer "preference_hour"
+    t.integer "relationship_number"
+    t.integer "meeting_number"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
