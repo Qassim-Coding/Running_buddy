@@ -14,8 +14,13 @@
     <% unless request.path == root_path %>
       <%= render "layouts/navbar" %>
     <% end %>
+
+
+    <% unless request.path == root_path %>
+      <%= render "layouts/sidebar" %>
+    <% end %>
+
     <%= render "shared/flashes" %>
-    <%= render "layouts/sidebar" %>
     <%= yield %>
   </body>
 </html>
