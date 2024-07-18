@@ -1,0 +1,28 @@
+<%# Side bar %>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <%= image_tag "janesmith.jpg.jpg", class: "avatar" %>
+    <h3><%= "#{@user.first_name} #{@user.last_name}" %></h3>
+  </div>
+  <ul class="sidebar-details">
+    <li>
+      <%= image_tag "connection.png", class: "icon" %>
+    </li>
+    <li>
+      <%= image_tag "meetings.png", class: "icon" %>
+    </li>
+    <li>
+      <%= image_tag "pace.png", class: "icon" %>
+      <%= @user.running_pace %>/km
+    </li>
+    <li>
+      <%= image_tag "day.png", class: "icon" %>
+    </li>
+    <li>
+      <%= image_tag "hour.png", class: "icon" %>
+    </li>
+    <li>
+      <%= image_tag "runs.png", class: "icon" %>
+    </li>
+  </ul>
+</div>
