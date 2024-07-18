@@ -1,0 +1,24 @@
+<header class="header">
+  <nav>
+      <%# <%= link_to root_path do %>
+        <%= image_tag 'logofinal.png', class: 'logo-img' %>
+      <%#   <% end %>
+
+    <div class="search-bar">
+      <%= form_with url: search_path, method: :get, local: true do |form| %>
+        <%= form.text_field :query, placeholder: 'Search...', class: 'search-input' %>
+        <span class="search-icon">
+          <%= image_tag 'Search_lens_icon.png'%>
+        </span>
+        <% end %>
+    </div>
+    <div class="icons">
+      <%#  <%= link_to notifications_path do  CREER LE PATH CORRESPONDANT !! %>
+        <%= image_tag 'Cloche_notif.png'%>
+      <%#  <% end %>
+      <%# <%= link_to profile_path(current_user) do  CREER LE PATH CORRESPONDANT !! %>
+        <%= image_tag 'profil_icon.png'%>
+      <%# <% end %>
+    </div>
+  </nav>
+</header>

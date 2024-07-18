@@ -1,7 +1,38 @@
 <h1>Pages#dashboard</h1>
 <p>Find me in app/views/pages/dashboard.html.erb</p>
 
-<% @meetings.each do |meeting| %>
-  <p><%= meeting.date %></p>
 
-<% end %>
+<div class="container">
+  <div class="recap">
+    <div>
+      <h1>Your meetings</h1>
+      <% @meetings.each do |meeting| %>
+        <p><%= meeting.date %></p>
+        <p><%= meeting.location %></p>
+        <p><%= meeting.weather_report %></p>
+        <p><%= "#{meeting.user.first_name} #{meeting.user.last_name}" %></p>
+      <% end %>
+    </div>
+
+    <div>
+      <h1>Your connections</h1>
+      <% @relationships.each do |relationship| %>
+        <p><%= relationship.status %></p>
+        <p><%= "#{relationship.asker.first_name} #{relationship.asker.last_name}" %></p>
+        <p><%= "#{relationship.receiver.first_name} #{relationship.receiver.last_name}" %></p>
+      <% end %>
+    </div>
+
+    <div>
+      <h1>Your messages</h1>
+      <% @messages.each do |message| %>
+        <p><%= message.content %></p>
+        <p><%= "#{message.user.first_name} #{message.user.last_name}" %></p>
+        <p><%= message.relationship.asker.last_name %></p>
+        <p><%= message.relationship.status %></p>
+      <% end %>
+    </div>
+  </div>
+
+
+</div>
