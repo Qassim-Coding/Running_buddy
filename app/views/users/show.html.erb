@@ -9,4 +9,25 @@
     <%= f.input :receiver_id, input_html: { value: @user.id } %>
   </div>
   <%= f.button :submit, "Create Relationship", class: "btn btn-primary" %>
+  <% end %>
+
+  <br><br>
+<%= @relationships.first %>
+
+<% @relationships.each do |relationship| %>
+<%= simple_form_for([relationship, Meeting.new]) do |f| %>
+    <div class="form-group">
+      <%= f.label :date %>
+      <%= f.datetime_select :date, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :location %>
+      <%= f.text_field :location, class: 'form-control' %>
+    </div>
+
+    <%= f.submit 'Create Meeting', class: 'btn btn-primary' %>
+
+
+  <% end %>
 <% end %>

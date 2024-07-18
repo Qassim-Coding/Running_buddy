@@ -1,24 +1,25 @@
-puts "Destroying all relationships..."
-Relationship.destroy_all
+puts "Destroying all messages..."
+Message.destroy_all
+
+puts "Destroying all user_meetings"
+UsersMeeting.destroy_all
 
 puts "Destroying all meetings..."
 Meeting.destroy_all
 
+puts "Destroying all relationships..."
+Relationship.destroy_all
+
 puts "Destroying all users..."
-User.destroy_all
+User.delete_all
+
 
 puts "creating users"
-User.delete_all
 
 User.create!(
   email: "john.doe@example.com",
   password: '123456',
-  password_confirmation: '123456',
-  reset_password_token: nil,
-  reset_password_sent_at: nil,
-  remember_created_at: nil,
-  created_at: Time.now,
-  updated_at: Time.now,
+  
   last_name: "Doe",
   first_name: "John",
   address: "123 Main Street, Anytown, USA",
