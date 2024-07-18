@@ -11,6 +11,5 @@ class PagesController < ApplicationController
     # l'utilisateur connecté peut voir ses relations
     @relationships = Relationship.where(asker_id: @user.id)
     # l'utilisateur connecté peut voir ses messages
-    @messages = @user.received_messages
   end
 end
