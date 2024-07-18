@@ -1,8 +1,6 @@
 <h1><%= @user.last_name %> <%= @user.first_name %></h1>
-<p>Base endurance : <%= @user.running_pace %></p>
+<p class="base">Base endurance : <%= @user.running_pace%></p>
 <p>Description : <%= @user.description %></p>
-
-
 
 <%= simple_form_for Relationship.new do |f| %>
   <div class="d-none">
