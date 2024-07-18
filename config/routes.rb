@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'messages/create'
+
 
   devise_for :users
   root to: "pages#home"
@@ -18,12 +20,13 @@ Rails.application.routes.draw do
   # resources :searches, only: [:search]
   resources :users, only: [:show]
   resources :meetings, only: [:index]
-  resources :relationships, only: [:create] do
+  resources :relationships, only: [:create, :show] do
     resources :messages, only: [:create]
     resources :meetings, only: [:create]
     member do
       get :favorite
     end
   end
+
   get "dashboard", to: "pages#dashboard"
 end

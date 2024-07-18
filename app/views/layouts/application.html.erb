@@ -11,12 +11,11 @@
   </head>
 
   <body>
-    <%= render "layouts/navbar" %>
+    <% unless request.path == root_path %>
+      <%= render "layouts/navbar" %>
+    <% end %>
+    <%= render "shared/flashes" %>
     <%= render "layouts/sidebar" %>
-
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>

@@ -1,10 +1,9 @@
 <header class="header">
   <nav>
-    <div class="logo">
       <%# <%= link_to root_path do %>
-        <%= image_tag 'Runningbuddy_logo.png', class: 'logo-img', style: 'width: 109px; height: 160px;' %>
+        <%= image_tag 'logofinal.png', class: 'logo-img' %>
       <%#   <% end %>
-    </div>
+
     <div class="search-bar">
       <%= form_with url: search_path, method: :get, local: true do |form| %>
         <%= form.text_field :query, placeholder: 'Search...', class: 'search-input' %>
@@ -15,7 +14,7 @@
     </div>
     <div class="icons">
       <%#  <%= link_to notifications_path do  CREER LE PATH CORRESPONDANT !! %>
-        <%= image_tag 'Cloche_notif.png'%>
+        <%= image_tag 'notification.png'%>
       <%#  <% end %>
       <%# <%= link_to profile_path(current_user) do  CREER LE PATH CORRESPONDANT !! %>
         <%= image_tag 'profil_icon.png'%>

@@ -4,7 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 5px 10px;
+  height: 70px;
 }
 
 .header nav {
@@ -14,17 +15,12 @@ width: 100%;
 justify-content: space-between;
 }
 
-.header .logo {
-display: flex;
-align-items: center;
-}
 
 .header .logo-img {
-width: 40px;
-height: auto;
+  width: 70px;
+  margin-left: 30px;
 }
 .header .search-bar {
-  width: 40%;
   max-width: 600px;
   height: 40px;
   margin: 0 auto;
@@ -34,25 +30,28 @@ height: auto;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50px;
   padding: 5px 20px;
+  cursor: pointer;
 }
 
-.header .search-bar input {
-  width: 100%;
-  padding: 10px;
+.header .search-input {
+  width: 80%;
+  max-width: 600px;
+  height: 40px;
+  display: flex;
   border: none;
-  border-radius: 20px;
-  box-sizing: border-box;
+  border-radius: 50px;
   background: transparent;
-  padding-left: 20px;
-  padding-right: 40px;
 }
 
 .header .search-bar .search-icon {
   position: absolute;
+  display: flex;
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
-  cursor: pointer;
+  img {
+    width: 30px;
+  }
 }
 
 .header .icons {
@@ -62,6 +61,6 @@ gap: 15px;
 }
 
 .header .icons img {
-width: 48px;
-height: 48px;
+width: 25%;
+height: 25%;
 }
