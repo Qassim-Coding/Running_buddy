@@ -9,17 +9,17 @@
         <div class="card-deck">
           <% @users.each do |user| %>
             <div class="card suggestion-card">
-              <%= image_tag user.picture, class: 'card-img-top', style: 'width: 100%; height: auto;' %>
+              <%= cl_image_tag user.picture, class: 'card-img-top', style: 'width: 100%; height: auto;' %>
               <div class="card-body">
                 <h4 class="card-title"><%= "#{user.first_name} #{user.last_name}" %></h4>
                 <p class="card-text">
-                  <%= image_tag 'carte.png', class: 'emoticon' %> <%= user.address.split(',')[1].strip %>
+                  <%= cl_image_tag 'carte.png', class: 'emoticon' %> <%= user.address.split(',')[1].strip %>
                 </p>
                 <p class="card-text">
-                  <%= image_tag 'sport (1).png', class: 'emoticon' %> <%= user.running_pace %> km
+                  <%= cl_image_tag 'sport (1).png', class: 'emoticon' %> <%= user.running_pace %> km
                 </p>
                 <p class="card-text">
-                  <%= image_tag 'stylo.png', class: 'emoticon' %> <%= user.description %>
+                  <%= cl_image_tag 'stylo.png', class: 'emoticon' %> <%= user.description %>
                 </p>
               </div>
             </div>
