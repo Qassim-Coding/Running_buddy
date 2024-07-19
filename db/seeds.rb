@@ -14,34 +14,33 @@ Relationship.destroy_all
 puts "Destroying all users..."
 User.delete_all
 
-
 puts "creating users"
 
-user1= User.create!(
-    email: "john.doe@example.com",
-    password: '123456',
-    last_name: "Doe",
-    first_name: "John",
-    address: "43 Avenue thiers, Melun, France",
-    picture: "app/assets/images/John_Legend_profil.png",
-    description: "Experienced runner looking for training partners.",
-    phone_number: "123-456-7890",
-    running_pace: 6.5,
-    next_official_running_event: "City Marathon",
-    preparation: "Yes",
-    how_long_have_you_been_running: "5 years",
-    run_frequency: 4,
-    other_sport: "Cycling",
-    preference_date: "Monday, Sathurday",
-    preference_hour: 6,
-    relationship_number: 1,
-    meeting_number: 2
-  )
-  file = File.open(user1.picture)
-  user1.avatar.attach(io: file, filename: "nes.png", content_type: "image/png")
-  user1.save
+user1 = User.create!(
+  email: "john.doe@example.com",
+  password: '123456',
+  last_name: "Doe",
+  first_name: "John",
+  address: "43 Avenue thiers, Melun, France",
+  picture: "app/assets/images/John_Legend_profil.png",
+  description: "Experienced runner looking for training partners.",
+  phone_number: "123-456-7890",
+  running_pace: 6.5,
+  next_official_running_event: "City Marathon",
+  preparation: "Yes",
+  how_long_have_you_been_running: "5 years",
+  run_frequency: 4,
+  other_sport: "Cycling",
+  preference_date: "Monday, Sathurday",
+  preference_hour: 6,
+  relationship_number: 1,
+  meeting_number: 2
+)
+file = File.open(user1.picture)
+user1.avatar.attach(io: file, filename: "nes.png", content_type: "image/png")
+user1.save
 
-User.create!(
+user2 = User.create!(
   email: "jane.smith@example.com",
   password: '123456',
   password_confirmation: '123456',
@@ -67,8 +66,11 @@ User.create!(
   relationship_number: 2,
   meeting_number: 1
 )
+file = File.open(user2.picture)
+user2.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+user2.save
 
-User.create!(
+user3 = User.create!(
   email: "sam.brown@example.com",
   password: '123456',
   password_confirmation: '123456',
@@ -94,8 +96,11 @@ User.create!(
   relationship_number: 5,
   meeting_number: 4
 )
+file = File.open(user3.picture)
+user3.avatar.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+user3.save
 
-User.create!(
+user4 = User.create!(
   email: "alain.stravami@example.com",
   password: '123456',
   password_confirmation: '123456',
@@ -121,8 +126,11 @@ User.create!(
   relationship_number: 2,
   meeting_number: 3
 )
+file = File.open(user4.picture)
+user4.avatar.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+user4.save
 
-User.create!(
+user5 = User.create!(
   email: "amelie.bouchard@example.com",
   password: '123456',
   password_confirmation: '123456',
@@ -148,8 +156,11 @@ User.create!(
   relationship_number: 15,
   meeting_number: 2
 )
+file = File.open(user5.picture)
+user5.avatar.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+user5.save
 
-User.create!(
+user6 = User.create!(
   email: "antoine.martin@example.com",
   password: '123456',
   password_confirmation: '123456',
@@ -175,8 +186,11 @@ User.create!(
   relationship_number: 14,
   meeting_number: 10
 )
+file = File.open(user6.picture)
+user6.avatar.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+user6.save
 
-User.create!(
+user7 = User.create!(
   email: "lucie.dubois@example.com",
   password: '123456',
   password_confirmation: '123456',
@@ -202,8 +216,11 @@ User.create!(
   relationship_number: 11,
   meeting_number: 21
 )
+file = File.open(user7.picture)
+user7.avatar.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+user7.save
 
-User.create!(
+user8 = User.create!(
   email: "killian.leblanc@example.com",
   password: '123456',
   password_confirmation: '123456',
@@ -229,8 +246,11 @@ User.create!(
   relationship_number: 2,
   meeting_number: 2
 )
+file = File.open(user8.picture)
+user8.avatar.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+user8.save
 
-User.create!(
+user9 = User.create!(
   email: "henry.moreau@example.com",
   password: '123456',
   password_confirmation: '123456',
@@ -256,8 +276,11 @@ User.create!(
   relationship_number: 10,
   meeting_number: 150
 )
+file = File.open(user9.picture)
+user9.avatar.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+user9.save
 
-User.create!(
+user10 = User.create!(
   email: "claire.rohand@example.com",
   password: '123456',
   password_confirmation: '123456',
@@ -282,10 +305,12 @@ User.create!(
   preference_hour: 6,
   relationship_number: 14,
   meeting_number: 10
-
 )
+file = File.open(user10.picture)
+user10.avatar.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+user10.save
 
-User.create!(
+user11 = User.create!(
   email: "pierre.perrin@example.com",
   password: '123456',
   password_confirmation: '123456',
@@ -311,6 +336,10 @@ User.create!(
   relationship_number: 2,
   meeting_number: 2
 )
+file = File.open(user11.picture)
+user11.avatar.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+user11.save
+
 puts "end of creating users"
 Meeting.create!(
   date: Date.new(2021, 6, 1),
