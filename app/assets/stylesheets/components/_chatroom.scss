@@ -1,7 +1,8 @@
 .chatroom {
-  background: white;
+  background: #FEFBFB;
+  background-size: cover;
   margin-top: 9px;
-  height: calc(80vh - 75px);
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -17,5 +18,10 @@
     height: 100%;
     overflow: scroll;
     padding: 1rem;
+  }
+
+  ::placeholder {
+    color: lightgrey; /* Gray color */
+    font-style: italic; /* Italic style */
   }
 }

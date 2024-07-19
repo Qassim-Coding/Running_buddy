@@ -9,4 +9,6 @@ class User < ApplicationRecord
   has_many :relationships_as_asker, class_name: "Relationship", foreign_key: :asker_id
   has_many :relationships_as_receiver, class_name: "Relationship", foreign_key: :receiver_id
   has_many :messages, dependent: :destroy
+
+  has_one_attached :avatar
 end

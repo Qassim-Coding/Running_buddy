@@ -65,9 +65,6 @@
       <%= f.button :submit, "Create Relationship", class: "btnshow" %>
     <% end %>
 
-  <br><br>
-    <%= @relationships.first %>
-
     <% @relationships.each do |relationship| %>
       <%= simple_form_for([relationship, Meeting.new]) do |f| %>
           <div class="form-group">
@@ -83,3 +80,7 @@
       <% end %>
     <% end %>
 </div>
+
+<% @relationships.each do |relationship| %>
+  <%= link_to "Go to Chatroom", relationship_path(relationship), class: "btn btn-secondary" %>
+<% end %>
