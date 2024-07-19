@@ -17,26 +17,29 @@ User.delete_all
 
 puts "creating users"
 
-User.create!(
-  email: "john.doe@example.com",
-  password: '123456',
-  last_name: "Doe",
-  first_name: "John",
-  address: "43 Avenue thiers, Melun, France",
-  picture: "https://example.com/johndoe.jpg",
-  description: "Experienced runner looking for training partners.",
-  phone_number: "123-456-7890",
-  running_pace: 6.5,
-  next_official_running_event: "City Marathon",
-  preparation: "Yes",
-  how_long_have_you_been_running: "5 years",
-  run_frequency: 4,
-  other_sport: "Cycling",
-  preference_date: "Monday, Sathurday",
-  preference_hour: 6,
-  relationship_number: 1,
-  meeting_number: 2
-)
+user1= User.create!(
+    email: "john.doe@example.com",
+    password: '123456',
+    last_name: "Doe",
+    first_name: "John",
+    address: "43 Avenue thiers, Melun, France",
+    picture: "app/assets/images/John_Legend_profil.png",
+    description: "Experienced runner looking for training partners.",
+    phone_number: "123-456-7890",
+    running_pace: 6.5,
+    next_official_running_event: "City Marathon",
+    preparation: "Yes",
+    how_long_have_you_been_running: "5 years",
+    run_frequency: 4,
+    other_sport: "Cycling",
+    preference_date: "Monday, Sathurday",
+    preference_hour: 6,
+    relationship_number: 1,
+    meeting_number: 2
+  )
+  file = File.open(user1.picture)
+  user1.avatar.attach(io: file, filename: "nes.png", content_type: "image/png")
+  user1.save
 
 User.create!(
   email: "jane.smith@example.com",
@@ -50,7 +53,7 @@ User.create!(
   last_name: "Smith",
   first_name: "Jane",
   address: "456 Avenue des graines, Cesson, France",
-  picture: "https://example.com/janesmith.jpg",
+  picture: "app/assets/images/janesmith.jpg",
   description: "Marathon runner looking to improve my pace.",
   phone_number: "987-654-3210",
   running_pace: 7.0,
@@ -60,7 +63,9 @@ User.create!(
   run_frequency: 5,
   other_sport: "Swimming",
   preference_date: "Saturday, Sunday",
-  preference_hour: 6
+  preference_hour: 6,
+  relationship_number: 2,
+  meeting_number: 1
 )
 
 User.create!(
@@ -75,7 +80,7 @@ User.create!(
   last_name: "Brown",
   first_name: "Sam",
   address: "789 Avenue des palmiers, Fontainebleau, France",
-  picture: "https://example.com/sambrown.jpg",
+  picture: "app/assets/images/sambrown.jpeg",
   description: "New to running, looking for a group to join.",
   phone_number: "555-123-4567",
   running_pace: 8.0,
@@ -85,7 +90,9 @@ User.create!(
   run_frequency: 3,
   other_sport: "Yoga",
   preference_date: "Monday, Friday",
-  preference_hour: 6
+  preference_hour: 6,
+  relationship_number: 5,
+  meeting_number: 4
 )
 
 User.create!(
@@ -100,7 +107,7 @@ User.create!(
   last_name: "Stravami",
   first_name: "Alain",
   address: "34 Boulevard Saint-Germain, Melun, France",
-  picture: "https://example.com/alainstravami.jpg",
+  picture: "app/assets/images/alainstravami.jpeg",
   description: "Passionate runner aiming to compete in marathons.",
   phone_number: "+33 1 23 45 67 89",
   running_pace: 5.5,
@@ -110,7 +117,9 @@ User.create!(
   run_frequency: 6,
   other_sport: "Tennis, Football",
   preference_date: "Friday, Wednesday",
-  preference_hour: 6
+  preference_hour: 6,
+  relationship_number: 2,
+  meeting_number: 3
 )
 
 User.create!(
@@ -125,7 +134,7 @@ User.create!(
   last_name: "Bouchard",
   first_name: "Amelie",
   address: "22 Rue de Rivoli, Melun, France",
-  picture: "https://example.com/ameliebouchard.jpg",
+  picture: "app/assets/images/ameliebouchard.jpeg",
   description: "Trail runner seeking new challenges.",
   phone_number: "+33 1 23 45 67 89",
   running_pace: 5.4,
@@ -135,7 +144,9 @@ User.create!(
   run_frequency: 5,
   other_sport: "Climbing",
   preference_date: "Monday, Friday",
-  preference_hour: 6
+  preference_hour: 6,
+  relationship_number: 15,
+  meeting_number: 2
 )
 
 User.create!(
@@ -150,7 +161,7 @@ User.create!(
   last_name: "Martin",
   first_name: "Antoine",
   address: "33 Rue de la République, Le mée sur seine, France",
-  picture: "https://example.com/antoinemartin.jpg",
+  picture: "app/assets/images/antoinemartin.jpeg",
   description: "Sprinter looking to improve speed.",
   phone_number: "+33 4 78 42 12 34",
   running_pace: 5.6,
@@ -160,7 +171,9 @@ User.create!(
   run_frequency: 4,
   other_sport: "Basketball",
   preference_date: "Monday, Saturday",
-  preference_hour: 8
+  preference_hour: 8,
+  relationship_number: 14,
+  meeting_number: 10
 )
 
 User.create!(
@@ -175,7 +188,7 @@ User.create!(
   last_name: "Dubois",
   first_name: "Lucie",
   address: "12 Rue Sainte-Catherine, Boissise, France",
-  picture: "https://example.com/luciedubois.jpg",
+  picture: "app/assets/images/luciedubois.jpeg",
   description: "Fitness enthusiast new to running.",
   phone_number: "+33 5 56 01 23 45",
   running_pace: 5.7,
@@ -186,8 +199,8 @@ User.create!(
   other_sport: "Pilates",
   preference_date: "Saturday, Sunday",
   preference_hour: 6,
-  relationship_number: 1,
-  meeting_number: 1
+  relationship_number: 11,
+  meeting_number: 21
 )
 
 User.create!(
@@ -202,7 +215,7 @@ User.create!(
   last_name: "Leblanc",
   first_name: "Killian",
   address: "45 Rue Paradis, Livry, France",
-  picture: "https://example.com/killianleblanc.jpg",
+  picture: "app/assets/images/killianleblanc.jpeg",
   description: "Casual runner aiming to complete a marathon.",
   phone_number: "+33 4 91 23 45 67",
   running_pace: 5.8,
@@ -229,7 +242,7 @@ User.create!(
   last_name: "Moreau",
   first_name: "Henry",
   address: "78 Avenue de la Liberté, Lyon, France",
-  picture: "https://example.com/henrymoreau.jpg",
+  picture: "app/assets/images/henrymoreau.jpeg",
   description: "Competitive runner with a focus on half marathons.",
   phone_number: "+33 4 78 34 56 78",
   running_pace: 5.9,
@@ -240,8 +253,8 @@ User.create!(
   other_sport: "Swimming",
   preference_date: "Monday, Friday",
   preference_hour: 6,
-  relationship_number: 1,
-  meeting_number: 1
+  relationship_number: 10,
+  meeting_number: 150
 )
 
 User.create!(
@@ -256,7 +269,7 @@ User.create!(
   last_name: "Rohand",
   first_name: "Claire",
   address: "56 Rue de la Victoire, Marseille, France",
-  picture: "https://example.com/clairerohand.jpg",
+  picture: "app/assets/images/clairerohand.jpeg",
   description: "New runner excited to join local races.",
   phone_number: "+33 4 91 56 78 90",
   running_pace: 6.0,
@@ -267,8 +280,8 @@ User.create!(
   other_sport: "Yoga",
   preference_date: "Monday, Wednesday",
   preference_hour: 6,
-  relationship_number: 1,
-  meeting_number: 1
+  relationship_number: 14,
+  meeting_number: 10
 
 )
 
@@ -284,7 +297,7 @@ User.create!(
   last_name: "Perrin",
   first_name: "Pierre",
   address: "67 Rue Sainte, Bordeaux, France",
-  picture: "https://example.com/pierreperrin.jpg",
+  picture: "app/assets/images/pierreperrin.jpeg",
   description: "Experienced marathon runner.",
   phone_number: "+33 5 56 78 90 12",
   running_pace: 6.1,
