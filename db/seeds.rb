@@ -33,7 +33,9 @@ User.create!(
   run_frequency: 4,
   other_sport: "Cycling",
   preference_date: "Monday, Sathurday",
-  preference_hour: 6
+  preference_hour: 6,
+  relationship_number: 1,
+  meeting_number: 2
 )
 
 User.create!(

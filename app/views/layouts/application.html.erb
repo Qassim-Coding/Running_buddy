@@ -17,14 +17,12 @@
     <% end %>
 
 
-    <% unless request.path == root_path || request.path == user_session_path %>
+    <% if request.path == dashboard_path %>
       <%= render "layouts/sidebar" %>
     <% end %>
 
     <%= render "shared/flashes" %>
-    <div class="margin-sidebar">
-      <%= yield %>
-    </div>
+    <%= yield %>
   </body>
   <the-script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></the-script>
 </html>
