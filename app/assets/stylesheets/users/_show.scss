@@ -4,6 +4,8 @@
   align-items: center;
   margin-left: 10px;
   margin-right: 10px;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
 
 .images-container {
@@ -22,7 +24,6 @@
 
 }
 
-
 .photo2 {
   display: flex;
   width: auto;
@@ -35,12 +36,6 @@
 }
 
 
-.runner-info {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
 .runner-info img {
   border-radius: 50%;
   margin-right: 20px;
@@ -49,15 +44,22 @@
 }
 
 .runner-details {
-  display: flex;
-  justify-content: space-around;
-  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  .runner-detail {
+    display: flex;
+    align-items: center;
+  }
+  .runner-detail p {
+    margin: 0px;
+  }
 }
 
 .details-column {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;
 }
 
 button {
@@ -69,6 +71,47 @@ button {
   cursor: pointer;
 }
 
-.icon {
+button:hover{
+  background-color: #503697;
+  color: white;
+}
+
+.btnshow{
+  background-color: #6200EA;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btnshow:hover{
+  background-color: #503697;
+  color: white;
+}
+
+.buttonshowaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.iconshow {
   width: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.info{
+  display: flex;;
 }
