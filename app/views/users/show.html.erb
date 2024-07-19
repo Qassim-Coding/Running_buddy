@@ -1,6 +1,56 @@
 
 
 
+
+<div class="profile-container">
+    <div class="images-container">
+<%= image_tag "imageprofil1.jpg", style: "margin-right: 20px" %>
+    <div class="photo2">
+<%= image_tag "imageprofil2.jpg", style: "padding-bottom: 20px" %>
+<%= image_tag "imageprofil3.jpg"%>
+    </div>
+    <div class="photo2">
+<%= image_tag "imageprofil2.jpg", style: "padding-bottom: 20px" %>
+<%= image_tag "imageprofil3.jpg"%>
+    </div>
+    </div>
+  <div class="runner_info">
+<h1><%= @user.last_name %> <%= @user.first_name %></h1>
+<p><%= @user.description %></p>
+</div>
+    </div>
+    <div class="runner-details">
+      <div class="details-column">
+  <%= image_tag "carte.png", class: "iconshow" %>
+      <div class="info">
+        <%= @user.address %>
+      </div>
+  <%= image_tag "pace.png", class: "iconshow" %>
+      <%= @user.running_pace %>/km
+  <%= image_tag "taches.png", class: "iconshow" %>
+      <%= @user.preparation %>
+  </div>
+  <div class="details-column">
+   <%= image_tag "runs.png", class: "iconshow" %>
+    <%= @user.other_sport %>
+  <%= image_tag "sport.png", class: "iconshow" %>
+    <%= @user.run_frequency %>
+  <%= image_tag "runs.png", class: "iconshow" %>
+    <%= @user.next_official_running_event %>
+  </div>
+  <div class="run">
+  <div class= "details-colomn">
+  <%= image_tag "day.png", class: "iconshow" %>
+   <%= @user.preference_date %>
+   <%= image_tag "hour.png", class: "iconshow" %>
+    <%= @user.preference_hour %>
+    </div>
+  </div>
+</div>
+
+<button>ASK CONNECTION</button>
+
+
 <%= simple_form_for Relationship.new do |f| %>
   <div class="d-none">
     <%= f.input :receiver_id, input_html: { value: @user.id } %>
@@ -26,47 +76,3 @@
     <%= f.submit 'Create Meeting', class: 'btn btn-primary' %>
   <% end %>
 <% end %>
-
-<div class="profile-container">
-    <div class="images-container">
-<%= image_tag "imageprofil1.jpg", style: "margin-right: 20px" %>
-    <div class="photo2">
-<%= image_tag "imageprofil2.jpg", style: "padding-bottom: 20px" %>
-<%= image_tag "imageprofil3.jpg"%>
-    </div>
-    <div class="photo2">
-<%= image_tag "imageprofil2.jpg", style: "padding-bottom: 20px" %>
-<%= image_tag "imageprofil3.jpg"%>
-    </div>
-    </div>
-  <div class="runner_info">
-<h1><%= @user.last_name %> <%= @user.first_name %></h1>
-<p><%= @user.description %></p>
-</div>
-    </div>
-    <div class="runner-details">
-      <div class="details-column">
-  <%= image_tag "carte.png", class: "icon" %>
-      <%= @user.address %>
-  <%= image_tag "pace.png", class: "icon" %>
-      <%= @user.running_pace %>/km
-  <%= image_tag "taches.png", class: "icon" %>
-      <%= @user.preparation %>
-  </div>
-  <div class="details_column">
-   <%= image_tag "runs.png", class: "icon" %>
-    <%= @user.other_sport %>
-  <%= image_tag "sport.png", class: "icon" %>
-    <%= @user.run_frequency %>
-  <%= image_tag "runs.png", class: "icon" %>
-    <%= @user.next_official_running_event %>
-  </div>
-  <div class="run">
-  <%= image_tag "day.png", class: "icon" %>
-   <%= @user.preference_date %>
-   <%= image_tag "hour.png", class: "icon" %>
-    <%= @user.preference_hour %>
-  </div>
-</div>
-
-<button>ASK CONNECTION</button>

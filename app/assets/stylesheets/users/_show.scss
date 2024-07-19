@@ -56,8 +56,8 @@
 
 .details-column {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;
 }
 
 button {
@@ -69,6 +69,8 @@ button {
   cursor: pointer;
 }
 
-.icon {
+.iconshow {
   width: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
