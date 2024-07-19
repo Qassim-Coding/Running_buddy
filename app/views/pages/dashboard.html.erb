@@ -2,74 +2,30 @@
   <div class="right-section">
     <div class="suggestions">
       <div class="top-bar">
-        <button>City</button>
-        <button>Path</button>
+        <%= link_to "City", dashboard_path(sort: 'city'), class: 'top-bar button' %>
+        <%= link_to "Running Pace", dashboard_path(sort: 'pace'), class: 'top-bar button' %>
       </div>
       <h3>Suggestions</h3>
-      <div class="card-deck">
-        <div class="card suggestion-card">
-          <%= image_tag 'John_Legend_profil.png', class: 'card-img-top', style: 'width: 100%; height: auto;' %>
-          <div class="card-body">
-            <h4 class="card-title">John Legend</h4>
-            <p class="card-text">
-              <%= image_tag 'carte.png', class: 'emoticon' %> Vaux-le-pénil
-            </p>
-            <p class="card-text">
-              <%= image_tag 'sport (1).png', class: 'emoticon' %> 5:35/km
-            </p>
-            <p class="card-text">
-              <%= image_tag 'stylo.png', class: 'emoticon' %> New to running, looking for a group to join.
-            </p>
-          </div>
-        </div>
-        <div class="card suggestion-card">
-          <%= image_tag 'Sania_mara_profil.jpg', class: 'card-img-top' %>
-          <div class="card-body">
-            <h4 class="card-title">Sania Mara</h4>
-            <p class="card-text">
-              <%= image_tag 'carte.png', class: 'emoticon' %> Cesson
-            </p>
-            <p class="card-text">
-              <%= image_tag 'sport (1).png', class: 'emoticon' %> 6:05/km
-            </p>
-            <p class="card-text">
-              <%= image_tag 'stylo.png', class: 'emoticon' %> Marathon runner looking to improve my pace
-            </p>
-          </div>
-        </div>
-        <div class="card suggestion-card">
-          <%= image_tag 'Fred_mercury_profile.jpg', class: 'card-img-top', style: 'width: 100%; height: auto;' %>
-          <div class="card-body">
-            <h4 class="card-title">Fred Mercury</h4>
-            <p class="card-text">
-              <%= image_tag 'carte.png', class: 'emoticon' %> Melun
-            </p>
-            <p class="card-text">
-              <%= image_tag 'sport (1).png', class: 'emoticon' %> 6:35/km
-            </p>
-            <p class="card-text">
-              <%= image_tag 'stylo.png', class: 'emoticon' %> Hi, I'm interested in joining your running group.
-            </p>
-          </div>
-        </div>
-        <div class="card suggestion-card">
-          <%= image_tag 'Jeannemarc_profile.jpg', class: 'card-img-top' %>
-          <div class="card-body">
-            <h4 class="card-title">Jeanne Marc</h4>
-            <p class="card-text">
-              <%= image_tag 'carte.png', class: 'emoticon' %> Melun
-            </p>
-            <p class="card-text">
-              <%= image_tag 'sport (1).png', class: 'emoticon' %> 6:45/km
-            </p>
-            <p class="card-text">
-              <%= image_tag 'stylo.png', class: 'emoticon' %> Run, run, run 🏃‍♀️
-            </p>
-          </div>
+        <div class="card-deck">
+          <% @users.each do |user| %>
+            <div class="card suggestion-card">
+              <%= image_tag user.picture, class: 'card-img-top', style: 'width: 100%; height: auto;' %>
+              <div class="card-body">
+                <h4 class="card-title"><%= "#{user.first_name} #{user.last_name}" %></h4>
+                <p class="card-text">
+                  <%= image_tag 'carte.png', class: 'emoticon' %> <%= user.address.split(',')[1].strip %>
+                </p>
+                <p class="card-text">
+                  <%= image_tag 'sport (1).png', class: 'emoticon' %> <%= user.running_pace %> km
+                </p>
+                <p class="card-text">
+                  <%= image_tag 'stylo.png', class: 'emoticon' %> <%= user.description %>
+                </p>
+              </div>
+            </div>
+          <% end %>
         </div>
       </div>
-    </div>
-
     <section class="map-section">
       <%= image_tag 'map_runningtest.png', class: 'map-img' %>
     </section>

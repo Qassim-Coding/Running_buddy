@@ -10,5 +10,7 @@ class PagesController < ApplicationController
     @meetings = Meeting.where(user_id: @user.id)
     # l'utilisateur connecté peut voir ses relations
     @relationships = Relationship.where(asker_id: @user.id)
+    @users = User.all
+    # permet d'afficher toutes les cartes des Users -> itération de mes cards.
   end
 end
