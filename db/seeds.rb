@@ -31,7 +31,7 @@ user1 = User.create!(
   how_long_have_you_been_running: "5 years",
   run_frequency: 4,
   other_sport: "Cycling",
-  preference_date: "Monday, Sathurday",
+  preference_date: "Monday, Saturday",
   preference_hour: 6,
   relationship_number: 1,
   meeting_number: 2
