@@ -70,3 +70,7 @@
 </div>
 
 <button>ASK CONNECTION</button>
+
+<% @relationships.each do |relationship| %>
+  <%= link_to "Go to Chatroom", relationship_path(relationship), class: "btn btn-secondary" %>
+<% end %>
