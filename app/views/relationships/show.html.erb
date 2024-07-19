@@ -1,5 +1,10 @@
 <div class="container chatroom" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @relationship.id %>" data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
-  <h1>Chatroom</h1>
+  <div class="d-flex justify-content-between align-items-center">
+      <h1>Chatroom</h1>
+      <%= link_to user_path(@relationship.receiver), class: "m-3 p-3" do %>
+        <%= image_tag @relationship.receiver.picture, alt: "Back to Profile", class: "profile-picture" %>
+      <% end %>
+  </div>
 
   <div class="messages-container" data-chatroom-subscription-target="messages">
     <% @relationship.messages.each do |message| %>
