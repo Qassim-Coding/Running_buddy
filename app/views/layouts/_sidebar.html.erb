@@ -4,7 +4,7 @@
     <%= image_tag "janesmith.jpg", class: "avatar" %>
     <h3><%= "#{@user.first_name} #{@user.last_name}" %></h3>
   </div>
-  <ul class="sidebar-details">
+  <ul class="sidebar-details border-end">
     <li>
       <%= image_tag "connection.png", class: "icon" %>
     </li>
@@ -13,13 +13,15 @@
     </li>
     <li>
       <%= image_tag "pace.png", class: "icon" %>
+      <%= @user.running_pace %>/km
     </li>
     <li>
       <%= image_tag "day.png", class: "icon" %>
-
+      <%= @user.preference_date %>
     </li>
     <li>
       <%= image_tag "hour.png", class: "icon" %>
+      <%= @user.preference_hour %>pm
     </li>
     <li>
       <%= image_tag "runs.png", class: "icon" %>
