@@ -1,10 +1,7 @@
 <div class="main-container">
   <div class="right-section d-flex">
     <div class="suggestions">
-      <div class="top-bar">
-        <%= link_to "City", dashboard_path(sort: 'city'), class: 'top-bar button' %>
-        <%= link_to "Running Pace", dashboard_path(sort: 'pace'), class: 'top-bar button' %>
-      </div>
+     <%= render "layouts/filter_bar" %>
       <h3>Suggestions</h3>
       <div class= "search">
       <div class="card-deck">
@@ -35,3 +32,5 @@
     <div>
   </div>
 </div>
+
+<%# <% console % > permet de tester son code embedded> %>
