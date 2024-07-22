@@ -13,6 +13,13 @@ class PagesController < ApplicationController
     @relationships = Relationship.where(asker_id: @user.id)
     # permet d'afficher toutes les cartes des Users -> itération de mes cards.
     @users = User.all
+        # permet d'afficher toutes les cartes des Users -> itération de mes cards.
+    @markers = @users.geocoded.map do |user|
+      {
+        lat: user.latitude,
+        lng: user.longitude
+      }
+    end
     # permet de filtrer les Users en fonction de leur running_pace
     if params[:sort].present?
       if params[:sort] == 'city_asc'
