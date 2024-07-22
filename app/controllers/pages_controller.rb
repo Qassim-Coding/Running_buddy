@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
+
   def home
   end
 
@@ -11,17 +12,12 @@ class PagesController < ApplicationController
     # l'utilisateur connecté peut voir ses relations
     @relationships = Relationship.where(asker_id: @user.id)
     @users = User.all
-    # permet d'afficher toutes les cartes des Users -> itération de mes cards.
-  end
-
-  def index
-    @users = User.all
-    # The `geocoded` scope filters only flats with coordinates
     @markers = @users.geocoded.map do |user|
       {
         lat: user.latitude,
         lng: user.longitude
       }
     end
+    # permet d'afficher toutes les cartes des Users -> itération de mes cards.
   end
 end
