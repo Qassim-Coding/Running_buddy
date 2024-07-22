@@ -25,7 +25,13 @@
           </div>
         <% end %>
       </div>
+    <%# <section class="map-section"> %>
+      <%# <%= image_tag 'map_runningtest.png', class: 'map-img' %>
+    <%# </section> %>
+      <div style="width: 100%; height: 600px;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['pk.eyJ1Ijoicm94YW5uZXBldGl0IiwiYSI6ImNseGx1emI0aDAxeHMycXM2emNmaGdzN2UifQ.FpAi7o7on2pii6rU4OEt9wEY'] %>"></div>
     </div>
-    <%= image_tag 'map_runningtest.png', class: 'map-img' %>
   </div>
 </div>
