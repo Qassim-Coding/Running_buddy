@@ -10,5 +10,7 @@ class User < ApplicationRecord
   has_many :relationships_as_receiver, class_name: "Relationship", foreign_key: :receiver_id
   has_many :messages, dependent: :destroy
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
   has_one_attached :avatar
 end

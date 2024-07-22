@@ -6,6 +6,7 @@
         <%= link_to "Running Pace", dashboard_path(sort: 'pace'), class: 'top-bar button' %>
       </div>
       <h3>Suggestions</h3>
+      <div class= "search">
       <div class="card-deck">
         <% @users.each do |user| %>
           <div class="card suggestion-card shadow-lg ">
@@ -25,13 +26,12 @@
           </div>
         <% end %>
       </div>
-    <%# <section class="map-section"> %>
-      <%# <%= image_tag 'map_runningtest.png', class: 'map-img' %>
-    <%# </section> %>
-      <div style="width: 100%; height: 600px;"
+      <div class="map-section" style="width: 100%; height: 600px; margin-left: 20px; position: sticky;"
         data-controller="map"
         data-map-markers-value="<%= @markers.to_json %>"
-        data-map-api-key-value="<%= ENV['pk.eyJ1Ijoicm94YW5uZXBldGl0IiwiYSI6ImNseGx1emI0aDAxeHMycXM2emNmaGdzN2UifQ.FpAi7o7on2pii6rU4OEt9wEY'] %>"></div>
-    </div>
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+      <%# <%= image_tag 'map_runningtest.png', class: 'map-img' %>
+    <div>
   </div>
 </div>

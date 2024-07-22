@@ -34,7 +34,9 @@ user1 = User.create!(
   preference_date: "Monday, Saturday",
   preference_hour: 6,
   relationship_number: 1,
-  meeting_number: 2
+  meeting_number: 2,
+  latitude: 48.52947235107422,
+  longitude: 2.6546881198883057
 )
 file = File.open(user1.picture)
 user1.avatar.attach(io: file, filename: "nes.png", content_type: "image/png")
@@ -64,7 +66,9 @@ user2 = User.create!(
   preference_date: "Saturday, Sunday",
   preference_hour: 6,
   relationship_number: 2,
-  meeting_number: 1
+  meeting_number: 1,
+  latitude: 48.52947235107422,
+  longitude: 2.6546881198883057
 )
 file = File.open(user2.picture)
 user2.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
@@ -94,7 +98,9 @@ user3 = User.create!(
   preference_date: "Monday, Friday",
   preference_hour: 6,
   relationship_number: 5,
-  meeting_number: 4
+  meeting_number: 4,
+  latitude: 48.52947235107422,
+  longitude: 2.6546881198883057
 )
 file = File.open(user3.picture)
 user3.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
