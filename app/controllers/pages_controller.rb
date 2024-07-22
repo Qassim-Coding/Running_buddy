@@ -13,4 +13,15 @@ class PagesController < ApplicationController
     @users = User.all
     # permet d'afficher toutes les cartes des Users -> itération de mes cards.
   end
+
+  def index
+    @users = User.all
+    # The `geocoded` scope filters only flats with coordinates
+    @markers = @users.geocoded.map do |user|
+      {
+        lat: user.latitude,
+        lng: user.longitude
+      }
+    end
+  end
 end
