@@ -5,7 +5,8 @@ import Swal from "sweetalert2"
 export default class extends Controller {
   connect() {
     console.log("coucou")
-    if (this.element.innerText === 'relationship accepted!') {
+    console.log(this.element.innerText.trim())
+    if (this.element.innerText.trim() === 'relationship accepted!') {
       Swal.fire({
         title: "Relationship accepted",
         text: "",
