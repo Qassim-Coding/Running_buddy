@@ -7,7 +7,7 @@
       <div class="card-deck">
         <% @users.each do |user| %>
           <div class="card suggestion-card shadow-lg ">
-            <%= cl_image_tag user.avatar.key, class: 'card-img-top' %>
+            <%= cl_image_tag user.avatar.key, crop: :fill, gravity: :face, class: 'card-img-top' %>
             <div class="card-body">
               <h4 class="card-title"><%= link_to "#{user.first_name} #{user.last_name}", user_path(user) %></h4>
               <p class="card-text">
