@@ -83,11 +83,6 @@
   border-radius: 20px;
 }
 
-.map-img {
-  width: 300px;
-  border-radius: 20px;
-  height: calc(100vh - 2em - 70px );
-  object-fit: cover;
-  position: sticky;
-  top: calc(1em + 35px);
+.search {
+  display: flex;
 }

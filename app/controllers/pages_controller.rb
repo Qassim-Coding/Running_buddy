@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
+
   def home
   end
 
@@ -12,7 +13,6 @@ class PagesController < ApplicationController
     @relationships = Relationship.where(asker_id: @user.id)
     # permet d'afficher toutes les cartes des Users -> itération de mes cards.
     @users = User.all
-
     # permet de filtrer les Users en fonction de leur running_pace
     if params[:sort].present?
       if params[:sort] == 'city_asc'
@@ -25,16 +25,12 @@ class PagesController < ApplicationController
         @users = @users.order("running_pace DESC")
       end
     end
-  end
-
-  def index
-    @users = User.all
-    # The `geocoded` scope filters only flats with coordinates
     @markers = @users.geocoded.map do |user|
       {
         lat: user.latitude,
         lng: user.longitude
       }
     end
+    # permet d'afficher toutes les cartes des Users -> itération de mes cards.
   end
 end
