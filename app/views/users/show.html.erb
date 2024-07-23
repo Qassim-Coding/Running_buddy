@@ -1,61 +1,21 @@
-
 <div class="profile-container">
   <div class="images-container">
-      <%= image_tag "imageprofil1.jpg", style: "margin-right: 20px" %>
+    <%= image_tag "imageprofil1.jpg", style: "margin-right: 20px", class: "--top-left-radius" %>
     <div class="photo2">
       <%= image_tag "imageprofil2.jpg", style: "padding-bottom: 20px" %>
       <%= image_tag "imageprofil3.jpg"%>
     </div>
-    <div class="photo2">
-     <%= image_tag "imageprofil2.jpg", style: "padding-bottom: 20px" %>
-     <%= image_tag "imageprofil3.jpg"%>
+   <div class="photo2">
+      <%= image_tag "imageprofil2.jpg", style: "padding-bottom: 20px", class: "--top-right-radius" %>
+      <%= image_tag "imageprofil3.jpg", class: "--bottom-right-radius" %>
     </div>
   </div>
-<div class="infofinal">
+
+  <div class="infofinal">
     <div class="runner_info">
-      <h1><%= @user.last_name %> <%= @user.first_name %></h1>
+      <h1><%= @user.first_name %> <%= @user.last_name %> </h1>
       <p><%= @user.description %></p>
     </div>
-<div class="info">
-<div class="runner-details">
-  <div class="runner-detail">
-      <%= image_tag "carte.png", class: "iconshow" %>
-      <p class="info"><%= @user.address %></p>
-  </div>
-  <div class="runner-detail">
-    <%= image_tag "pace.png", class: "iconshow" %>
-      <p class="info"><%= @user.running_pace %>/km</p>
-  </div>
-  <div class="runner-detail">
-      <%= image_tag "taches.png", class: "iconshow" %>
-      <p class="info"><%= @user.preparation %></p>
-  </div>
-  <div class="runner-detail">
-    <%= image_tag "sport.png", class: "iconshow" %>
-    <p class="info"><%= @user.other_sport %></p>
-  </div>
-  <div class="runner-detail">
-    <%= image_tag "sport.png", class: "iconshow" %>
-    <p class="info"><%= @user.run_frequency %></p>
-  </div>
-  <div class="runner-detail">
-      <%= image_tag "runs.png", class: "iconshow" %>
-      <p class="info"><%= @user.next_official_running_event %></p>
-  </div>
-</div>
-<div class="right-section">
-  <div class="preference">
-      <%= image_tag "day.png", class: "iconshow" %>
-      <p class="info"><%= @user.preference_date %></p>
-  </div>
-  <div class="preference">
-      <%= image_tag "hour.png", class: "iconshow" %>
-      <p class="info"><%= @user.preference_hour %></p>
-  </div>
-</div>
-</div>
-</div>
-<div class="buttonshowaction">
 
 <% unless current_user == @user  %>
 
@@ -68,27 +28,81 @@
           </div>
           <%= f.button :submit, "Create Relationship", class: "btnshow" %>
         <% end %>
+
+    <div class="info">
+      <div class="runner-details">
+        <div class="runner-detail">
+          <%= image_tag "carte.png", class: "iconshow" %>
+          <p class="info"><%= @user.address %></p>
+        </div>
+        <div class="runner-detail">
+          <%= image_tag "pace.png", class: "iconshow" %>
+          <p class="info"><%= @user.running_pace %>/km</p>
+        </div>
+        <div class="runner-detail">
+          <%= image_tag "taches.png", class: "iconshow" %>
+          <p class="info"><%= @user.preparation %></p>
+        </div>
+        <div class="runner-detail">
+          <%= image_tag "sport.png", class: "iconshow" %>
+          <p class="info"><%= @user.other_sport %></p>
+        </div>
+        <div class="runner-detail">
+          <%= image_tag "sport.png", class: "iconshow" %>
+          <p class="info"><%= @user.run_frequency %></p>
+        </div>
+        <div class="runner-detail">
+          <%= image_tag "runs.png", class: "iconshow" %>
+          <p class="info"><%= @user.next_official_running_event %></p>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="preference">
+          <%= image_tag "day.png", class: "iconshow" %>
+          <p class="info"><%= @user.preference_date %></p>
+        </div>
+        <div class="preference">
+          <%= image_tag "hour.png", class: "iconshow" %>
+          <p class="info"><%= @user.preference_hour %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="buttonshowaction">
+    <%= simple_form_for Relationship.new do |f| %>
+      <div class="d-none">
+        <%= f.input :receiver_id, input_html: { value: @user.id } %>
+      </div>
+      <%= f.button :submit, "Create Relationship", class: "btnshow" %>
+    
     <% end %>
 
 
 
     <% @relationships.each do |relationship| %>
       <%= simple_form_for([relationship, Meeting.new]) do |f| %>
-          <div class="form-group">
-            <%= f.label :date %>
-            <%= f.datetime_select :date, class: 'form-control' %>
-          </div>
+        <div class="form-group">
+          <%= f.label :date %>
+          <%= f.datetime_select :date, class: 'form-control' %>
+        </div>
+
 
           <div class="form-group">
             <%= f.label :location %>
             <%= f.text_field :location, class: 'form-control' %>
           </div>
-        <%= f.submit 'Create Meeting', class: 'btn btn-primary' %>
+        <%= f.submit 'Create Meeting', class: "btnshowmeting"%>
       <% end %>
     <% end %>
-</div>
+  </div>
 
 <% @relationships.each do |relationship| %>
-  <%= link_to "Go to Chatroom", relationship_path(relationship), class: "btn btn-secondary" %>
+  <%= link_to "Go to Chatroom", relationship_path(relationship), class: "btnshowmeting" %>
 <% end %>
+
 <% end %>
+
+</div>
+

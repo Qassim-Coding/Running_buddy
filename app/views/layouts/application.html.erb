@@ -9,6 +9,7 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload", media: 'all' %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css">
     <%= javascript_importmap_tags %>
+    <%= favicon_link_tag 'Runningbuddy_logo.png', rel:"icon", type:"image/png" %>
   </head>
 
   <body>
@@ -17,7 +18,7 @@
       <%= render "layouts/navbar" %>
     <% end %>
 
-    <div class="main-layout-container">
+<div class= <%= "main-layout-container" if current_page?(dashboard_path) %>>
       <% if request.path == dashboard_path %>
         <%= render "layouts/sidebar" %>
       <% end %>

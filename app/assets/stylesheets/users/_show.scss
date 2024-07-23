@@ -1,11 +1,12 @@
 .profile-container {
   display: flex;
-  flex-direction: column;
-  align-items: self-end;
-  margin-left: 10px;
-  margin-right: 10px;
-  flex-wrap: wrap;
-  align-content: flex-start;
+    flex-direction: column;
+    align-items: self-end;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 40px;
 }
 
 .images-container {
@@ -82,6 +83,7 @@ button:hover{
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin: 30px;
 }
 
 .btnshow:hover{
@@ -97,6 +99,7 @@ button:hover{
     flex-wrap: wrap;
     flex-direction: row;
     margin-bottom: 20px;
+    padding: 50px;
 }
 
 .iconshow {
@@ -108,4 +111,39 @@ button:hover{
 
 .info{
   display: flex;;
+}
+
+.btnshowmeting{
+  background-color: #6200EA;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 6px;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.btnshowmeting:hover{
+  background-color: #503697;
+  color: white;
+}
+
+.--top-right-radius{
+  border-top-right-radius: 10px;
+}
+
+.--bottom-right-radius{
+  border-bottom-right-radius: 10px;
+}
+
+.--top-left-radius{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
