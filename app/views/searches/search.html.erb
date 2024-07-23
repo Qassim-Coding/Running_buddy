@@ -1,15 +1,7 @@
 <div class="main-container">
-  <div class="left-section">
-   <h1>The results of your search are as follows</h1>
-    <h3>Search Form</h3>
-  </div>
   <div class="right-section d-flex">
-    <%= form_with url: search_path, method: :get, class: "search-form" do %>
-        <%= text_field_tag :query, params[:query], class: "form-control me-2", placeholder: "Type a keyword" %>
-        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
-      <% end %>
     <div class="suggestions">
-      <h3>Your search results</h3>
+      <h3>Your search results for : "<%= params[:query].capitalize %>"</h3>
       <div class="search">
         <div class="card-deck">
           <% if @users.any? %>

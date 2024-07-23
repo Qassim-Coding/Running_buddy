@@ -14,13 +14,16 @@ class PagesController < ApplicationController
     # permet d'afficher toutes les cartes des Users -> itération de mes cards.
     @users = User.all
         # permet d'afficher toutes les cartes des Users -> itération de mes cards.
+    # permet de filtrer les Users en fonction de leur running_pace
+    # le code de geocoder pour afficher la map avec les points
     @markers = @users.geocoded.map do |user|
       {
         lat: user.latitude,
-        lng: user.longitude
+        lng: user.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: { user: user }),
+        marker_html: render_to_string(partial: "marker")
       }
     end
-    # permet de filtrer les Users en fonction de leur running_pace
     if params[:sort].present?
       if params[:sort] == 'city_asc'
         @users = @users.order_by_city_asc
@@ -31,14 +34,6 @@ class PagesController < ApplicationController
       elsif params[:sort] == 'pace_desc'
         @users = @users.order("running_pace DESC")
       end
-    end
-    @markers = @users.geocoded.map do |user|
-      {
-        lat: user.latitude,
-        lng: user.longitude,
-        info_window_html: render_to_string(partial: "info_window", locals: { user: user }),
-        marker_html: render_to_string(partial: "marker")
-      }
     end
     # permet d'afficher toutes les cartes des Users -> itération de mes cards.
   end
