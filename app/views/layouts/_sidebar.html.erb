@@ -1,6 +1,6 @@
-<%# Side bar %>
+
 <div class="sidebar">
-  <div class="sidebar-header">
+  <div class="sidebar-header text-center">
     <% if @user.avatar.attached? %>
       <%= cl_image_tag @user.avatar.key, class: "avatar" %>
     <% else %>
@@ -8,29 +8,29 @@
     <% end %>
     <h3><%= "#{@user.first_name} #{@user.last_name}" %></h3>
   </div>
-  <ul class="sidebar-details border-end">
-    <li>
-      <i class="fa-solid fa-user-group fa-2x", style="color: #7853DB;"></i>
+  <ul class="sidebar-details list-unstyled border-end">
+    <li class="d-flex align-items-center justify-content-between mb-4 px-4">
+      <i class="fa-solid fa-user-group fa-2x me-2" style="color: #7853DB;"></i>
       <%= @user.relationship_number %>
     </li>
-    <li>
-      <i class="fa-regular fa-handshake fa-2x", style="color: #7853DB;"></i>
+    <li class="d-flex align-items-center justify-content-between mb-4 px-4">
+      <i class="fa-regular fa-handshake fa-2x me-2" style="color: #7853DB;"></i>
       <%= @user.meeting_number %>
     </li>
-    <li>
-      <i class="fa-solid fa-person-running fa-2x", style="color: #7853DB;"></i>
+    <li class="d-flex align-items-center justify-content-between mb-4 px-4">
+      <i class="fa-solid fa-person-running fa-2x me-2" style="color: #7853DB;"></i>
       <%= @user.running_pace_minute_and_second %> / km
     </li>
-    <li>
-      <i class="fa-regular fa-calendar fa-2x", style="color: #7853DB;"></i>
+    <li class="d-flex align-items-center justify-content-between mb-4 px-4">
+      <i class="fa-regular fa-calendar fa-2x me-2" style="color: #7853DB;"></i>
       <%= @user.preference_date %>
     </li>
-    <li>
-      <i class="fa-regular fa-clock fa-2x", style="color: #7853DB;"></i>
+    <li class="d-flex align-items-center justify-content-between mb-4 px-4">
+      <i class="fa-regular fa-clock fa-2x me-2" style="color: #7853DB;"></i>
       <%= @user.preference_hour %>pm
     </li>
-    <li>
-      <i class="fa-solid fa-bullseye fa-2x", style="color: #7853DB;"></i>
+    <li class="d-flex align-items-center justify-content-between mb-4 px-4">
+      <i class="fa-solid fa-bullseye fa-2x me-2" style="color: #7853DB;"></i>
       <%= @user.next_official_running_event %>
     </li>
   </ul>
