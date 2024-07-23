@@ -1,16 +1,16 @@
 
 <div class="profile-container">
-  <div class="images-container">
+  <div class="images-container" class="position-absolute top-50 start-50">
       <%= image_tag "imageprofil1.jpg", style: "margin-right: 20px" %>
-    <div class="photo2">
+  <div class="photo2">
       <%= image_tag "imageprofil2.jpg", style: "padding-bottom: 20px" %>
       <%= image_tag "imageprofil3.jpg"%>
-    </div>
-    <div class="photo2">
+  </div>
+  <div class="photo2">
      <%= image_tag "imageprofil2.jpg", style: "padding-bottom: 20px" %>
      <%= image_tag "imageprofil3.jpg"%>
-    </div>
   </div>
+ </div>
 <div class="infofinal">
     <div class="runner_info">
       <h1><%= @user.last_name %> <%= @user.first_name %></h1>
@@ -75,11 +75,11 @@
             <%= f.label :location %>
             <%= f.text_field :location, class: 'form-control' %>
           </div>
-        <%= f.submit 'Create Meeting', class: 'btn btn-primary' %>
+        <%= f.submit 'Create Meeting', class: "btnshowmeting"%>
       <% end %>
     <% end %>
 </div>
 
 <% @relationships.each do |relationship| %>
-  <%= link_to "Go to Chatroom", relationship_path(relationship), class: "btn btn-secondary" %>
+  <%= link_to "Go to Chatroom", relationship_path(relationship), class: "btnshowmeting" %>
 <% end %>
