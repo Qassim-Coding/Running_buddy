@@ -10,23 +10,23 @@
   </div>
   <ul class="sidebar-details border-end">
     <li>
-      <%= image_tag "connection.png", class: "icon" %>
+      <i class="fa-solid fa-user-group fa-2x", style="color: #7853DB;"></i>
       <%= @user.relationship_number %>
     </li>
     <li>
-      <%= image_tag "meetings.png", class: "icon" %>
+      <i class="fa-regular fa-handshake fa-2x", style="color: #7853DB;"></i>
       <%= @user.meeting_number %>
     </li>
     <li>
-      <%= image_tag "pace.png", class: "icon" %>
+      <i class="fa-solid fa-person-running fa-2x", style="color: #7853DB;"></i>
       <%= @user.running_pace_minute_and_second %> / km
     </li>
     <li>
-      <%= image_tag "day.png", class: "icon" %>
+      <i class="fa-regular fa-calendar fa-2x", style="color: #7853DB;"></i>
       <%= @user.preference_date %>
     </li>
     <li>
-      <%= image_tag "hour.png", class: "icon" %>
+      <i class="fa-regular fa-clock fa-2x", style="color: #7853DB;"></i>
       <%= @user.preference_hour %>pm
     </li>
     <li>
