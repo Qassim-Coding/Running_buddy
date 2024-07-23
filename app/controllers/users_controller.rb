@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
-    @relationships = current_user.relationships_as_asker.where(receiver:@user)
+    @relationships_as_asker = current_user.relationships_as_asker.where(receiver:@user)
+    @relationships_as_receiver = current_user.relationships_as_receiver.where(asker:@user)
+    @relationships = @relationships_as_asker + @relationships_as_receiver
     @meeting = Meeting.new
   end
 

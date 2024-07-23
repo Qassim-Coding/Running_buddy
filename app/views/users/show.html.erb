@@ -17,6 +17,18 @@
       <p><%= @user.description %></p>
     </div>
 
+<% unless current_user == @user  %>
+
+
+
+    <% if @relationships_as_asker.empty? && @relationships_as_receiver.empty? %>
+        <%= simple_form_for Relationship.new do |f| %>
+          <div class="d-none">
+            <%= f.input :receiver_id, input_html: { value: @user.id } %>
+          </div>
+          <%= f.button :submit, "Create Relationship", class: "btnshow" %>
+        <% end %>
+
     <div class="info">
       <div class="runner-details">
         <div class="runner-detail">
@@ -64,7 +76,10 @@
         <%= f.input :receiver_id, input_html: { value: @user.id } %>
       </div>
       <%= f.button :submit, "Create Relationship", class: "btnshow" %>
+    
     <% end %>
+
+
 
     <% @relationships.each do |relationship| %>
       <%= simple_form_for([relationship, Meeting.new]) do |f| %>
@@ -86,4 +101,8 @@
 <% @relationships.each do |relationship| %>
   <%= link_to "Go to Chatroom", relationship_path(relationship), class: "btnshowmeting" %>
 <% end %>
+
+<% end %>
+
 </div>
+
