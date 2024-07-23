@@ -10,6 +10,7 @@ class RelationshipsController < ApplicationController
     @relationship.asker = current_user
     @relationship.receiver = User.find(params[:relationship][:receiver_id])
     @relationship.status = "accepted"
+  
     if @relationship.save
       redirect_to user_path(@relationship.receiver), notice: 'relationship accepted!'
     else
