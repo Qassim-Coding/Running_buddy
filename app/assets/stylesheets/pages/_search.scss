@@ -1,0 +1,99 @@
+.main-container {
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-section {
+  display: flex;
+  width: 70%;
+  padding: 1em;
+  align-items: flex-start;
+}
+
+.suggestions {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  flex-grow: 1;
+  width: 30%;
+}
+
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 calc(50% - 20px);
+  max-width: calc(50% - 20px);
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-img-top {
+  object-position: top;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  margin: 0;
+  color: #7853DB;
+}
+
+.card-text {
+  margin: 5px 0;
+}
+
+.emoticon {
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+.map-section {
+  width: 40%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  height: 90vh;
+  position: sticky;
+  top: 5vh;
+}
+
+.form-control {
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+::placeholder {
+  color: lightgrey; /* Gray color */
+  font-style: italic; /* Italic style */
+}
