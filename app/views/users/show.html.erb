@@ -1,35 +1,26 @@
 <div class="profile-container">
+
   <div class="images-container">
     <%= image_tag "imageprofil1.jpg", style: "margin-right: 20px", class: "--top-left-radius" %>
     <div class="photo2">
       <%= image_tag "imageprofil2.jpg", style: "padding-bottom: 20px" %>
       <%= image_tag "imageprofil3.jpg"%>
     </div>
-   <div class="photo2">
+    <div class="photo2">
       <%= image_tag "imageprofil2.jpg", style: "padding-bottom: 20px", class: "--top-right-radius" %>
       <%= image_tag "imageprofil3.jpg", class: "--bottom-right-radius" %>
     </div>
   </div>
 
   <div class="infofinal">
+
     <div class="runner_info">
       <h1><%= @user.first_name %> <%= @user.last_name %> </h1>
       <p><%= @user.description %></p>
     </div>
 
-<% unless current_user == @user  %>
-
-
-
-    <% if @relationships_as_asker.empty? && @relationships_as_receiver.empty? %>
-        <%= simple_form_for Relationship.new do |f| %>
-          <div class="d-none">
-            <%= f.input :receiver_id, input_html: { value: @user.id } %>
-          </div>
-          <%= f.button :submit, "Create Relationship", class: "btnshow" %>
-        <% end %>
-
     <div class="info">
+
       <div class="runner-details">
         <div class="runner-detail">
           <%= image_tag "carte.png", class: "iconshow" %>
@@ -67,19 +58,22 @@
           <p class="info"><%= @user.preference_hour %></p>
         </div>
       </div>
+
     </div>
+
   </div>
 
-  <div class="buttonshowaction">
-    <%= simple_form_for Relationship.new do |f| %>
-      <div class="d-none">
-        <%= f.input :receiver_id, input_html: { value: @user.id } %>
-      </div>
-      <%= f.button :submit, "Create Relationship", class: "btnshow" %>
-    
+  <% unless current_user == @user  %>
+
+    <% if @relationships_as_asker.empty? && @relationships_as_receiver.empty? %>
+
+      <%= simple_form_for Relationship.new do |f| %>
+        <div class="d-none">
+          <%= f.input :receiver_id, input_html: { value: @user.id } %>
+        </div>
+        <%= f.button :submit, "Create Relationship", class: "btnshow" %>
+      <% end %>
     <% end %>
-
-
 
     <% @relationships.each do |relationship| %>
       <%= simple_form_for([relationship, Meeting.new]) do |f| %>
@@ -88,21 +82,21 @@
           <%= f.datetime_select :date, class: 'form-control' %>
         </div>
 
-
-          <div class="form-group">
-            <%= f.label :location %>
-            <%= f.text_field :location, class: 'form-control' %>
-          </div>
+        <div class="form-group">
+          <%= f.label :location %>
+          <%= f.text_field :location, class: 'form-control' %>
+        </div>
         <%= f.submit 'Create Meeting', class: "btnshowmeting"%>
       <% end %>
     <% end %>
-  </div>
 
-<% @relationships.each do |relationship| %>
-  <%= link_to "Go to Chatroom", relationship_path(relationship), class: "btnshowmeting" %>
-<% end %>
 
-<% end %>
+    <% @relationships.each do |relationship| %>
+      <%= link_to "Go to Chatroom", relationship_path(relationship), class: "btnshowmeting" %>
+    <% end %>
+
+
+  <% end %>
+
 
 </div>
-
