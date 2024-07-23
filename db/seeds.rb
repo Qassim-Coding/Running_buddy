@@ -15,7 +15,7 @@ Relationship.destroy_all
 puts "Destroying all users..."
 User.delete_all
 
-puts "creating users"
+puts "creating users genial"
 
 user1 = User.create!(
   email: "john.doe@example.com",
