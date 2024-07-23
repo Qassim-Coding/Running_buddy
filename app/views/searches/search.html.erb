@@ -1,52 +1,52 @@
-<h1>Searches#search</h1>
-<h2> Ci-dessous se trouve une liste contenant tous nos users, afin de tester notre seed et app</h2>
-<ul>
-<div class="container">
-  <div class="row justify-content-left">
-    <div class="col-sm-8">
-      <div id="users">
-        <% if @users.any? %>
-      <ul>
-          <% User.all.each do |user| %>
-                <li> <%= user.last_name + " " + user.first_name + " " + user.address %> </li>
+<div class="main-container">
+  <div class="left-section">
+   <h1>The results of your search are as follows</h1>
+    <h3>Search Form</h3>
+  </div>
+  <div class="right-section d-flex">
+    <%= form_with url: search_path, method: :get, class: "search-form" do %>
+        <%= text_field_tag :query, params[:query], class: "form-control me-2", placeholder: "Type a keyword" %>
+        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+      <% end %>
+    <div class="suggestions">
+      <h3>Your search results</h3>
+      <div class="search">
+        <div class="card-deck">
+          <% if @users.any? %>
+            <% @users.each do |user| %>
+              <% unless user == current_user %>
+                <div class="card suggestion-card shadow-lg">
+                  <%= link_to user_path(user), class: "card-link" do %>
+                    <%= cl_image_tag user.avatar.key, crop: :fill, gravity: :face, class: 'card-img-top' %>
+                    <div class="card-body">
+                      <h4 class="card-title"><%= "#{user.first_name} #{user.last_name}" %></h4>
+                      <p class="card-text">
+                        <%= image_tag 'carte.png', class: 'emoticon' %> <%= user.address.split(',')[1].strip %>
+                      </p>
+                      <p class="card-text">
+                        <%= image_tag 'sport (1).png', class: 'emoticon' %> <%= user.running_pace %> km
+                      </p>
+                      <p class="card-text">
+                        <%= image_tag 'stylo.png', class: 'emoticon' %> <%= user.description %>
+                      </p>
+                      <p class="card-text">
+                        <%= image_tag 'meetings.png', class: 'emoticon' %> <%= user.preference_date %> at <%= user.preference_hour %>h
+                      </p>
+                    </div>
+                  <% end %>
+                </div>
+              <% end %>
+            <% end %>
+          <% else %>
+            <em>Sorry, no user found.</em>
           <% end %>
-        <% else %>
-          <em>Sorry, no user found.</em>
-        <% end %>
+        </div>
       </div>
+    </div>
+    <div class="map-section"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
 </div>
-<p></p>
-<p></p>
-<h3> ici se trouvera notre recherche, dans un form with</h3>
-
-<div class="row justify-content-center">
-  <div class="col-sm-8 my-3">
-    <%= form_with url: search_path, method: :get, class: "d-flex" do %>
-      <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Type a keyword"
-        %>
-      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
-    <% end %>
-  <div id="users">
-    <% if @users.any? %>
-    <ul>
-      <% @users.each do |user| %>
-        <li> <%= user.last_name + " " + user.first_name %> </li>
-      <% end %>
-      <% else %>
-        <em>Sorry, no user found.</em>
-      <% end %>
-  </div>
-
-  </div>
-<h2> Fin de notre Form-with</h2>
-
-</div>
-
-<%# Pourquoi je n'arrive pas dans la show de mon User quand j'ajoute son nom ? %>
-<%# Comment inclure/spécifier l'ID de l'User recherché ? %>
-<p>Find me in app/views/searches/search.html.erb</p>
