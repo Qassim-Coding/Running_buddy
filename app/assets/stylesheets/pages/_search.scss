@@ -7,21 +7,17 @@
 .search-form {
   display: flex;
   flex-direction: column;
+  width: 30%;
+  padding: 20px;
 }
 
-.right-section {
-  display: flex;
-  width: 70%;
-  padding: 1em;
-  align-items: flex-start;
-}
 
 .suggestions {
   background-color: #fff;
   padding: 20px;
   border-radius: 20px;
   flex-grow: 1;
-  width: 30%;
+  width: 70%;
 }
 
 .card-deck {
@@ -72,7 +68,7 @@
 }
 
 .map-section {
-  width: 40%;
+  width: 30%;
   background-color: #fff;
   padding: 20px;
   border-radius: 20px;
@@ -94,6 +90,6 @@
 }
 
 ::placeholder {
-  color: lightgrey; /* Gray color */
-  font-style: italic; /* Italic style */
+  color: lightgrey;
+  font-style: italic;
 }
