@@ -14,6 +14,7 @@ class User < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
   has_one_attached :avatar
+  has_many_attached :photos
 
   pg_search_scope :search_by_city, against: :address,
   using: {
@@ -32,5 +33,4 @@ class User < ApplicationRecord
   # récupère toutes les villes, les tries par ordres croissants et les retourne
   scope :order_by_city_desc, -> { all.sort_by(&:city).reverse }
   # récupère toutes les villes, les tries par ordres decroissants et les retourne
-
 end
