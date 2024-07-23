@@ -33,4 +33,8 @@ class User < ApplicationRecord
   # récupère toutes les villes, les tries par ordres croissants et les retourne
   scope :order_by_city_desc, -> { all.sort_by(&:city).reverse }
   # récupère toutes les villes, les tries par ordres decroissants et les retourne
+  def running_pace_minute_and_second
+    "#{running_pace / 60}:#{running_pace % 60}"
+  end
+
 end

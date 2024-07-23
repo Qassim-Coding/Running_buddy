@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_22_085154) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_23_140224) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -86,7 +86,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_22_085154) do
     t.string "picture"
     t.text "description"
     t.string "phone_number"
-    t.decimal "running_pace"
+    t.integer "running_pace"
     t.string "next_official_running_event"
     t.text "preparation"
     t.string "how_long_have_you_been_running"
