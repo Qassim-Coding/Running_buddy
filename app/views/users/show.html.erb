@@ -1,13 +1,13 @@
 <div class="profile-container">
   <div class="images-container">
-    <%= image_tag "imageprofil1.jpg", style: "margin-right: 20px" %>
+    <%= image_tag "imageprofil1.jpg", style: "margin-right: 20px", class: "--top-left-radius" %>
     <div class="photo2">
       <%= image_tag "imageprofil2.jpg", style: "padding-bottom: 20px" %>
-      <%= image_tag "imageprofil3.jpg" %>
+      <%= image_tag "imageprofil3.jpg"%>
     </div>
-    <div class="photo2">
-      <%= image_tag "imageprofil2.jpg", style: "padding-bottom: 20px" %>
-      <%= image_tag "imageprofil3.jpg" %>
+   <div class="photo2">
+      <%= image_tag "imageprofil2.jpg", style: "padding-bottom: 20px", class: "--top-right-radius" %>
+      <%= image_tag "imageprofil3.jpg", class: "--bottom-right-radius" %>
     </div>
   </div>
 
@@ -87,4 +87,3 @@
   <%= link_to "Go to Chatroom", relationship_path(relationship), class: "btnshowmeting" %>
 <% end %>
 </div>
-
