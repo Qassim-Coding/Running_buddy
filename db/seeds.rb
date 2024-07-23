@@ -21,7 +21,7 @@ user1 = User.create!(
   password: '123456',
   last_name: "Doe",
   first_name: "John",
-  address: "43 Avenue thiers, Melun, France",
+  address: "10 rue guy baudoin, Melun, France",
   picture: "app/assets/images/John_Legend_profil.png",
   description: "Experienced runner looking for training partners.",
   phone_number: "123-456-7890",
@@ -31,10 +31,11 @@ user1 = User.create!(
   how_long_have_you_been_running: "5 years",
   run_frequency: 4,
   other_sport: "Cycling",
-  preference_date: "Monday, Sathurday",
+  preference_date: "Monday, Saturday",
   preference_hour: 6,
   relationship_number: 1,
-  meeting_number: 2
+  meeting_number: 2,
+
 )
 file = File.open(user1.picture)
 user1.avatar.attach(io: file, filename: "nes.png", content_type: "image/png")
@@ -51,7 +52,7 @@ user2 = User.create!(
   updated_at: Time.now,
   last_name: "Smith",
   first_name: "Jane",
-  address: "456 Avenue des graines, Cesson, France",
+  address: "43b avenue thiers, Melun, France",
   picture: "app/assets/images/janesmith.jpg",
   description: "Marathon runner looking to improve my pace.",
   phone_number: "987-654-3210",
@@ -64,7 +65,7 @@ user2 = User.create!(
   preference_date: "Saturday, Sunday",
   preference_hour: 6,
   relationship_number: 2,
-  meeting_number: 1
+  meeting_number: 1,
 )
 file = File.open(user2.picture)
 user2.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
@@ -81,8 +82,8 @@ user3 = User.create!(
   updated_at: Time.now,
   last_name: "Brown",
   first_name: "Sam",
-  address: "789 Avenue des palmiers, Fontainebleau, France",
-  picture: "app/assets/images/sambrown.jpeg",
+  address: "113 avenue des charmettes, Le-mée-sur-seine, France",
+  picture: "app/assets/images/sambrown.jpg",
   description: "New to running, looking for a group to join.",
   phone_number: "555-123-4567",
   running_pace: 8.0,
@@ -94,10 +95,10 @@ user3 = User.create!(
   preference_date: "Monday, Friday",
   preference_hour: 6,
   relationship_number: 5,
-  meeting_number: 4
+  meeting_number: 4,
 )
 file = File.open(user3.picture)
-user3.avatar.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+user3.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 user3.save
 
 user4 = User.create!(
@@ -111,8 +112,8 @@ user4 = User.create!(
   updated_at: Time.now,
   last_name: "Stravami",
   first_name: "Alain",
-  address: "34 Boulevard Saint-Germain, Melun, France",
-  picture: "app/assets/images/alainstravami.jpeg",
+  address: "16 rue de moissy, Combs-la-ville, France",
+  picture: "app/assets/images/alainstravami.jpg",
   description: "Passionate runner aiming to compete in marathons.",
   phone_number: "+33 1 23 45 67 89",
   running_pace: 5.5,
@@ -127,7 +128,7 @@ user4 = User.create!(
   meeting_number: 3
 )
 file = File.open(user4.picture)
-user4.avatar.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+user4.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 user4.save
 
 user5 = User.create!(
@@ -141,8 +142,8 @@ user5 = User.create!(
   updated_at: Time.now,
   last_name: "Bouchard",
   first_name: "Amelie",
-  address: "22 Rue de Rivoli, Melun, France",
-  picture: "app/assets/images/ameliebouchard.jpeg",
+  address: "44 rue du Dr pouillot, Melun, France",
+  picture: "app/assets/images/ameliebouchard.jpg",
   description: "Trail runner seeking new challenges.",
   phone_number: "+33 1 23 45 67 89",
   running_pace: 5.4,
@@ -157,7 +158,7 @@ user5 = User.create!(
   meeting_number: 2
 )
 file = File.open(user5.picture)
-user5.avatar.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+user5.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 user5.save
 
 user6 = User.create!(
@@ -171,8 +172,8 @@ user6 = User.create!(
   updated_at: Time.now,
   last_name: "Martin",
   first_name: "Antoine",
-  address: "33 Rue de la République, Le mée sur seine, France",
-  picture: "app/assets/images/antoinemartin.jpeg",
+  address: "9 route de nangis, Melun, France",
+  picture: "app/assets/images/antoinemartin.jpg",
   description: "Sprinter looking to improve speed.",
   phone_number: "+33 4 78 42 12 34",
   running_pace: 5.6,
@@ -187,7 +188,7 @@ user6 = User.create!(
   meeting_number: 10
 )
 file = File.open(user6.picture)
-user6.avatar.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+user6.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 user6.save
 
 user7 = User.create!(
@@ -201,8 +202,8 @@ user7 = User.create!(
   updated_at: Time.now,
   last_name: "Dubois",
   first_name: "Lucie",
-  address: "12 Rue Sainte-Catherine, Boissise, France",
-  picture: "app/assets/images/luciedubois.jpeg",
+  address: "142 Rue du Bois Moissy, Vaux-le-Pénil, France",
+  picture: "app/assets/images/luciedubois.jpg",
   description: "Fitness enthusiast new to running.",
   phone_number: "+33 5 56 01 23 45",
   running_pace: 5.7,
@@ -217,7 +218,7 @@ user7 = User.create!(
   meeting_number: 21
 )
 file = File.open(user7.picture)
-user7.avatar.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+user7.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 user7.save
 
 user8 = User.create!(
@@ -231,8 +232,8 @@ user8 = User.create!(
   updated_at: Time.now,
   last_name: "Leblanc",
   first_name: "Killian",
-  address: "45 Rue Paradis, Livry, France",
-  picture: "app/assets/images/killianleblanc.jpeg",
+  address: "3 rue Claude Bernard, Melun, France",
+  picture: "app/assets/images/killianleblanc.jpg",
   description: "Casual runner aiming to complete a marathon.",
   phone_number: "+33 4 91 23 45 67",
   running_pace: 5.8,
@@ -247,7 +248,7 @@ user8 = User.create!(
   meeting_number: 2
 )
 file = File.open(user8.picture)
-user8.avatar.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+user8.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 user8.save
 
 user9 = User.create!(
@@ -261,8 +262,8 @@ user9 = User.create!(
   updated_at: Time.now,
   last_name: "Moreau",
   first_name: "Henry",
-  address: "78 Avenue de la Liberté, Lyon, France",
-  picture: "app/assets/images/henrymoreau.jpeg",
+  address: "824 Av. du Lys,Dammarie-les-Lys, France",
+  picture: "app/assets/images/henrymoreau.jpg",
   description: "Competitive runner with a focus on half marathons.",
   phone_number: "+33 4 78 34 56 78",
   running_pace: 5.9,
@@ -277,7 +278,7 @@ user9 = User.create!(
   meeting_number: 150
 )
 file = File.open(user9.picture)
-user9.avatar.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+user9.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 user9.save
 
 user10 = User.create!(
@@ -291,8 +292,8 @@ user10 = User.create!(
   updated_at: Time.now,
   last_name: "Rohand",
   first_name: "Claire",
-  address: "56 Rue de la Victoire, Marseille, France",
-  picture: "app/assets/images/clairerohand.jpeg",
+  address: "3 All. du Mûrier, La Rochette, France",
+  picture: "app/assets/images/clairerohand.jpg",
   description: "New runner excited to join local races.",
   phone_number: "+33 4 91 56 78 90",
   running_pace: 6.0,
@@ -307,7 +308,7 @@ user10 = User.create!(
   meeting_number: 10
 )
 file = File.open(user10.picture)
-user10.avatar.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+user10.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 user10.save
 
 user11 = User.create!(
@@ -321,8 +322,8 @@ user11 = User.create!(
   updated_at: Time.now,
   last_name: "Perrin",
   first_name: "Pierre",
-  address: "67 Rue Sainte, Bordeaux, France",
-  picture: "app/assets/images/pierreperrin.jpeg",
+  address: "50 Quai Maréchal Joffre, Melun, France",
+  picture: "app/assets/images/pierreperrin.jpg",
   description: "Experienced marathon runner.",
   phone_number: "+33 5 56 78 90 12",
   running_pace: 6.1,
@@ -337,7 +338,7 @@ user11 = User.create!(
   meeting_number: 2
 )
 file = File.open(user11.picture)
-user11.avatar.attach(io: file, filename: "nes.jpeg", content_type: "image/jpeg")
+user11.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 user11.save
 
 puts "end of creating users"

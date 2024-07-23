@@ -1,7 +1,7 @@
 .profile-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: self-end;
   margin-left: 10px;
   margin-right: 10px;
   flex-wrap: wrap;
@@ -10,11 +10,10 @@
 
 .images-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   width: 80%;
   margin-bottom: 20px;
   object-fit: cover;
-
 }
 
 .images-container img {
@@ -83,6 +82,7 @@ button:hover{
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin: 30px;
 }
 
 .btnshow:hover{
@@ -98,6 +98,7 @@ button:hover{
     flex-wrap: wrap;
     flex-direction: row;
     margin-bottom: 20px;
+    padding: 50px;
 }
 
 .iconshow {
@@ -107,11 +108,28 @@ button:hover{
 }
 
 
-.right-section {
-  display: flex;
-  flex-direction: column;
-}
-
 .info{
   display: flex;;
+}
+
+.btnshowmeting{
+  background-color: #6200EA;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 6px;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.btnshowmeting:hover{
+  background-color: #503697;
+  color: white;
 }
