@@ -48,7 +48,9 @@
         </div>
       </div>
 
-      <div class="rsection">
+
+
+      <div class="rsection container">
         <div class="preference">
           <%= image_tag "day.png", class: "iconshow" %>
           <p class="info"><%= @user.preference_date %></p>
@@ -57,9 +59,9 @@
           <%= image_tag "hour.png", class: "iconshow" %>
           <p class="info"><%= @user.preference_hour %></p>
         </div>
-      </div>
 
-      <div class="Medals">
+
+      <div class="Medals-container">
         <div class="Medal">
           <%= image_tag "medaille.png", class: "iconshow" %>
           <p class="info"><%= @user.next_official_running_event %></p>
@@ -68,6 +70,7 @@
           <%= image_tag "medaille.png", class: "iconshow" %>
           <p class="info"><%= @user.next_official_running_event %></p>
         </div>
+      </div>
       </div>
 
     </div>

@@ -105,7 +105,9 @@ button:hover{
 
 
 .info{
-  display: flex;;
+  display: flex;
+  padding-left: 30px;
+  border: black;
 }
 
 .btnshowmeting{
@@ -160,6 +162,22 @@ button:hover{
 }
 
 .rsection{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Medals-container {
   display: flex;
   justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.preference{
+  display: flex;
+  align-items: center;
+    p{
+      margin: 0px;
+    }
 }
