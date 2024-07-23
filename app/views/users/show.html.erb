@@ -1,11 +1,17 @@
 <div class="profile-container container">
 
   <div class="images-container">
-    <%= image_tag "imageprofil1.jpg", class: "first-img" %>
-    <%= image_tag "imageprofil2.jpg"%>
-    <%= image_tag "imageprofil3.jpg"%>
-    <%= image_tag "imageprofil2.jpg" %>
-    <%= image_tag "imageprofil3.jpg"%>
+    <% if @user.photos.attached? %>
+      <% @user.photos.each do |photo| %>
+        <%= image_tag photo %>
+      <% end %>
+    <% else %>
+      <%= image_tag "imageprofil1.jpg" %>
+      <%= image_tag "imageprofil2.jpg"%>
+      <%= image_tag "imageprofil3.jpg"%>
+      <%= image_tag "imageprofil2.jpg" %>
+      <%= image_tag "imageprofil3.jpg"%>
+    <% end %>
   </div>
 
   <div class="infofinal">
