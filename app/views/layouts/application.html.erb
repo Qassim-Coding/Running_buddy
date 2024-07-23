@@ -18,7 +18,7 @@
       <%= render "layouts/navbar" %>
     <% end %>
 
-    <div class="main-layout-container">
+<div class= <%= "main-layout-container" if current_page?(dashboard_path) %>>
       <% if request.path == dashboard_path %>
         <%= render "layouts/sidebar" %>
       <% end %>
