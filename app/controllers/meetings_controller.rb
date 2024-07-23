@@ -12,7 +12,7 @@ class MeetingsController < ApplicationController
     if @meeting.save
       @user_meeting = UsersMeeting.new(meeting: @meeting, user_id: @relationship.receiver_id)
       @user_meeting.save
-      redirect_to user_path(@relationship.asker), notice: 'Meeting created!'
+      redirect_to user_path(@relationship.receiver), notice: 'Meeting created!'
     else
       redirect_to user_path(@relationship.receiver), notice: 'Meeting not created :('
     end
