@@ -27,7 +27,6 @@
   <div class="all">
     <div class="info">
 
-
       <div class="runner-details">
         <div class="runner-detail">
           <i class="fa-solid fa-map-location-dot fa-2x iconshow" style="color: #7853DB;"></i>
@@ -53,29 +52,29 @@
           <i class="fa-solid fa-bullseye fa-2x iconshow" style="color: #7853DB;"></i>
           <p class="info"><%= @user.next_official_running_event %></p>
         </div>
-      </div>
-
-      <div class="rsection container">
-        <div class="preference">
-            <i class="fa-regular fa-calendar fa-2x" style="color: #7853DB;"></i>
-            <p class="info"><%= @user.preference_date %></p>
-            <i class="fa-regular fa-clock fa-2x" style="color: #7853DB;"></i>
-            <p class="info"><%= @user.preference_hour %> PM</p>
-          </div>
-
-      <div class="Medals-container">
-        <div class="Medal">
-          <i class="fa-solid fa-medal fa-2x" style="color: #7853DB;"></i>
-          <p class="info"><%= @user.next_official_running_event %></p>
+        <div class="runner-detail">
+          <i class="fa-regular fa-calendar fa-2x iconshow" style="color: #7853DB;"></i>
+          <p class="info"><%= @user.@user.preference_date%></p>
+        </div><div class="runner-detail">
+          <i class="fa-regular fa-clock fa-2x iconshow" style="color: #7853DB;"></i>
+          <p class="info"><%= @user.@user.preference_houre%></p>
+        </div><div class="runner-detail">
+          <i class="fa-solid fa-medal fa-2x iconshow" style="color: #7853DB;"></i>
+          <p class="info"><%= @user.next_official_running_event%></p>
         </div>
-        <div class="Medal">
-          <i class="fa-solid fa-medal fa-2x" style="color: #7853DB;"></i>
-          <p class="info"><%= @user.next_official_running_event %></p>
+        </div><div class="runner-detail">
+          <i class="fa-solid fa-medal fa-2x iconshow" style="color: #7853DB;"></i>
+          <p class="info"><%= @user.previous_run1%></p>
+        </div>
+        <div class="runner-detail">
+          <i class="fa-solid fa-medal fa-2x iconshow" style="color: #7853DB;"></i>
+          <p class="info"><%= @user.previous_run2%></p>
+
+
         </div>
       </div>
       </div>
-
-
+    </div>
     </div>
 
     <% unless current_user == @user  %>
@@ -105,13 +104,11 @@
           <% end %>
         <% end %>
 
-
       <% @relationships.each do |relationship| %>
         <%= link_to "Let's talk!", relationship_path(relationship), class: "btnshowmeting" %>
       <% end %>
 
     <% end %>
-  </div>
   </div>
   </div>
 </div>
