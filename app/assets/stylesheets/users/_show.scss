@@ -36,41 +36,28 @@
   height: 100%;
 }
 
-.photo2 {
-  display: flex;
-  width: auto;
-  height: auto;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  object-fit: cover;
-
-}
-
 
 .runner-info img {
   border-radius: 50%;
   margin-right: 20px;
   object-fit: cover;
-
 }
 
 .runner-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
+  padding-top: 51px;
   .runner-detail {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
   }
   .runner-detail p {
     margin: 0px;
-  }
-}
+    gap: 1em;
 
-.details-column {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  }
 }
 
 button {
@@ -113,17 +100,27 @@ button:hover{
     padding: 50px;
 }
 
-.iconshow {
-  width: 30px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-
 .info{
   display: flex;
-  padding-left: 30px;
   border: black;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: flex-start;
+  padding-left: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+    p{
+      padding-left: 15px;
+    }
+}
+
+.infofinal{
+  display: flex;
+  align-items: center;
+  align-content: stretch;
+  flex-direction: row;
+  margin-bottom: 20px;
 }
 
 .btnshowmeting{
@@ -148,19 +145,6 @@ button:hover{
   color: white;
 }
 
-.--top-right-radius{
-  border-top-right-radius: 10px;
-}
-
-.--bottom-right-radius{
-  border-bottom-right-radius: 10px;
-}
-
-.--top-left-radius{
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
 .relation-container{
   display: flex;
   justify-content: space-between;
@@ -168,32 +152,11 @@ button:hover{
   align-items: center;
 }
 
-.infofinal{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-content: stretch;
-  flex-direction: row;
-  margin-bottom: 20px;
-}
-
-.rsection{
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-    h4{
-      margin: 20px;
-    }
-}
 
 .Medals-container {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
 }
 
 .preference{
@@ -205,21 +168,16 @@ button:hover{
     }
 }
 
-.preferencetitle{
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
-  margin-top: 20px;
-}
-
 .images-iteration:nth-child(1){
   grid-row: 1 / span 2;
 }
 
-.medalsection {
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
-  margin-top: 20px;
-  padding-right: 20px;
+.all{
+  display: flex;
+}
+
+.iconshow{
+  width: 1em;
+  display: flex;
+  justify-content: center;
 }
