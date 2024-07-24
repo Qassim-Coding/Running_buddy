@@ -48,6 +48,7 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
   padding-top: 70px;
+  margin-left: 90px;
   .runner-detail {
     display: flex;
     align-items: center;
@@ -79,9 +80,10 @@ button:hover{
   color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
   margin: 30px;
+
 }
 
 .btnshow:hover{
@@ -198,4 +200,26 @@ button:hover{
 .string-optional{
   padding-top: 20px;
   padding-bottom: 5px;
+}
+
+.avatar-container{
+  position: relative;
+  display: inline-block;
+}
+
+.avatar {
+  border-radius: 50%;
+  display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  left: 14%;
+  top: 110%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.7); /* Optionnel, pour ajouter un fond semi-transparent */
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: purple;
+  font-weight: bold;
 }
