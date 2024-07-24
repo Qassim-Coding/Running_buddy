@@ -14,7 +14,7 @@
         <i class="fa-solid fa-user-group fa-2x me-2" style="color: #7853DB;"></i>
         <%= @relationships.count %>
       </li>
-      <div class="meetings-list dropdown-content mb-3" data-dropdown-target="list">
+      <div class="buddies-list d-none dropdown-content mb-3" data-dropdown-target="list">
         <% @relationships.each do |relationship| %>
         <div class="d-flex justify-content-center my-2 meeting-display">
           <% if relationship.asker == current_user %>
