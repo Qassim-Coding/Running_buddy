@@ -445,7 +445,7 @@ pictures13 = [
   'https://dgtzuqphqg23d.cloudfront.net/J4an4cYTt_pGqgfBJxneJkUJ0rQpQmOw2WUDqc8UVuM-1536x2048.jpg',
   'https://dgtzuqphqg23d.cloudfront.net/O4D6S2JS2qSlrRLyTC5IOH27ttmpGqtTfa6AuEs0Rug-1536x2048.jpg',
   'https://dgtzuqphqg23d.cloudfront.net/E0u93A_-ENgPKLEB7gVwa-38HF-eR4iSsRPl_13FuGQ-2048x1367.jpg',
-  'https://dgtzuqphqg23d.cloudfront.net/cJaY5c4jC5YiovoDUOQqdkaVT2uAsHEivgLLJOuQ5aM-2048x1367.jpg',
+  'https://dgtzuqphqg23d.cloudfront.net/mSORkHtx108fjbrmBeOpnsr3RRA9MfyUpc5TECXt14c-2048x1365.jpg',
   'https://dgtzuqphqg23d.cloudfront.net/sDEWuBwJ9iGUX6b5R8-JydmHZ39vHoWUWivRKufzEhk-1365x2048.jpg'
 ]
 

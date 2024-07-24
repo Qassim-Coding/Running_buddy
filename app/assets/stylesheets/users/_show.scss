@@ -178,8 +178,14 @@ button:hover{
 }
 
 .rsection{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+    h4{
+      margin: 20px;
+    }
 }
 
 .Medals-container {
@@ -193,11 +199,27 @@ button:hover{
 .preference{
   display: flex;
   align-items: center;
+  padding-bottom: 20px;
     p{
       margin: 0px;
     }
 }
 
+.preferencetitle{
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
 .images-iteration:nth-child(1){
   grid-row: 1 / span 2;
+}
+
+.medalsection {
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  margin-top: 20px;
+  padding-right: 20px;
 }
