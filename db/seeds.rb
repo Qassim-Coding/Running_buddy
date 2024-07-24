@@ -427,8 +427,8 @@ user9.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 user9.save
 
 pictures9 = [
-  'https://cvws.icloud-content.com/S/AaXjVPTkG2uU7Ahu4hkpnubLqoW9/20240616+triathlon+cannes-ecluse+0945+%C2%A9Alexis+Komenda.JPG?o=AoUUoHaMbYu4Q0_4nkEa895wY-MCkTPsil7BEpkJhI68&v=1&z=https%3A%2F%2Fp47-content.icloud.com%3A443&x=1&a=CAogvNmayyiVFI0aFM1MTBkLkgvfNXO9B8O3pa9kMQZZMu8SZxDC8_-gjjIYwoqTpo4yIgEAUgTLqoW9aiY7h6NBCPABQnbgQIgYjR41Em5cmehAXK4JF6IdNWtUgMmMJ_OzGnIm5AM5-bPwdcRJ9aAD0noHJftcLyYy06v7TXFf9z1-aV_xcdanDks&e=1721825019&r=9b973060-4fcb-4cef-b35a-b5cbcd9e577d-6&s=vPdW81dIArgKj2b5i_r6RnjLd7I',
-  'https://cvws.icloud-content.com/S/AUJU4MmuNI4Pa_6ciKi--hhqkd74/20240616+triathlon+cannes-ecluse+0942+%C2%A9Alexis+Komenda.JPG?o=AkozVq5SHLqjKXjz0fEUaQvJywe7S6kf9RDZ0M7EaU_S&v=1&z=https%3A%2F%2Fp47-content.icloud.com%3A443&x=1&a=CAog1SauUMPgNvbwtT9xL-uG_YuOHV1LAgBLnL-V3XmE1lgSZxDs7P-gjjIY7IOTpo4yIgEAUgRqkd74aiYPV3LL97wvi1Usro1BBlUdParvfBTwMoUL8ElQnJ-CLNkIYPEWd3ImSCq_di4zqUDZ5Ra1Aj8H_FJGLm0LDY7IagXlaLNCaVr8X8CsGVg&e=1721825018&r=24a3ef22-d69e-402e-bf21-516e94d055e7-5&s=NV1Ktni948kAm5rKywaiMftTUzg',
+  'https://verticale-hauterive.ch/wp-content/uploads/2022/11/IMG_7515-scaled.jpg',
+  'https://dgtzuqphqg23d.cloudfront.net/6XdZ9hIl8b9DqR_uEcemgGFsk7OYrdOtsBecLiWry8w-2048x1536.jpg',
   'https://dgtzuqphqg23d.cloudfront.net/ETdJt-2R_bwqrakvECdullthOGUCdtVAHw9kFtkwo7s-1152x2048.jpg',
   'https://dgtzuqphqg23d.cloudfront.net/fO1BPkFPgHU4JCeWAtgl63ZiI-ldSrY7tYmd6cW5huU-1536x2048.jpg',
   'https://dgtzuqphqg23d.cloudfront.net/5lEK5RQOge-mqj3vad4JSpGYqVqfLqGCyKlYDrRyALU-1536x2048.jpg'
@@ -475,8 +475,8 @@ user10.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 user10.save
 
 pictures10 = [
-  'https://cvws.icloud-content.com/S/AdDyka1U_Kt1yONwOCsWvWUJ0JpV/20240616+triathlon+cannes-ecluse+0950+%C2%A9Alexis+Komenda.JPG?o=AlP99UCGjauqUYrrDXRQY3O2TM8AhJuS-LsSh16EoJ1g&v=1&z=https%3A%2F%2Fp47-content.icloud.com%3A443&x=1&a=CAogwxyl0wphMHbf5zwRBTvu2QXExGaQC1N_c0gKExbBobQSZxDD8_-gjjIYw4qTpo4yIgEAUgQJ0JpVaiaIra5gpn8-w2dqh5N5PjGRlAhkkhEYvYVgMuj2SYqDxvC1WtBgh3ImMb5yi7l7docTFvO1dreDgG1xmiH2O04QyKvAGgCFrxgvWbY5-gI&e=1721825019&r=9b973060-4fcb-4cef-b35a-b5cbcd9e577d-11&s=Z_7L446UMsFfHid5Wu65NyT0J7Y',
-  'https://cvws.icloud-content.com/S/Ad7vlt7X_bJX_hR9oEdhV3u__tAJ/20240616+triathlon+cannes-ecluse+0958+%C2%A9Alexis+Komenda.JPG?o=AiR-rbv-wG-cCA5tsEwaC6YneEBaxdt6GiiSNT2zuX-8&v=1&z=https%3A%2F%2Fp47-content.icloud.com%3A443&x=1&a=CAogkifdSCbSrXRQUF2ha2_h398G7qtyErNTbG5u3qVhyZYSZxD_9IChjjIY_4uUpo4yIgEAUgS__tAJaiYLJFV538KzzNhaLQwyZxxUWv5C1Dulmf0BR03X-RyYejPFiUQs13ImXwNwEkYkO2l-BsXbAxNzFEd-ebhMhoe2BwLRZGVvHGZeqa0fEM4&e=1721825035&r=2854c5c7-2aab-4134-aec4-1941e6607b23-3&s=7GCzooXvEGM76Z33YAGZFAJtbzA',
+  'https://verticale-hauterive.ch/wp-content/uploads/2022/11/IMG_7496-scaled.jpg',
+  'https://dgtzuqphqg23d.cloudfront.net/RxVArd3Gbwn0kn6d77fRq65OGbly22vBpvlgi8IESW8-2048x1152.jpg',
   'https://dgtzuqphqg23d.cloudfront.net/WbrXEMGUNYeALkKdQc7mEN0-QKu4uwZgeICtCjg9n-s-2048x1536.jpg',
   'https://dgtzuqphqg23d.cloudfront.net/jMGJMupNLK86SD7QYdaXhcyL4X0IjRauHC596uvR3eA-2048x1536.jpg',
   'https://dgtzuqphqg23d.cloudfront.net/LXuhjiPCtiyasKPifrLtNN_588lwvGEKg91LI_yvxOY-2048x1536.jpg'
@@ -523,8 +523,8 @@ user11.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 user11.save
 
 pictures11 = [
-  'https://cvws.icloud-content.com/S/AX1VzZmTRj4MtC_lY7_wINARZJb6/20240616+triathlon+cannes-ecluse+0921+%C2%A9Alexis+Komenda.JPG?o=Ajh-wFedobhDni9xfyuhXwtzld6F38mXdTRU8WU4hQsE&v=1&z=https%3A%2F%2Fp47-content.icloud.com%3A443&x=1&a=CAogVHKI3uQ1GxcyVhsAJeFHI00Gn7K0FG2FpKuuIt9wplsSZxD_xv-gjjIY_92Spo4yIgEAUgQRZJb6aia-6yVRPyMVAMv750NF90dEK3Wvql6yJRA3LmMNIJ5u1Pt9rBSdUnImfuzuPEIodad8sFDT97tpERBGerbLSUS2pCIdfPVCbGBvXP1O8p4&e=1721825013&r=c452e7f6-00ac-49cd-89d8-664809b1b2cb-27&s=nmgMphKVJEAsc6g0PyF7SzSiSgg',
-  'https://cvws.icloud-content.com/S/Ad7vlt7X_bJX_hR9oEdhV3u__tAJ/20240616+triathlon+cannes-ecluse+0958+%C2%A9Alexis+Komenda.JPG?o=AiR-rbv-wG-cCA5tsEwaC6YneEBaxdt6GiiSNT2zuX-8&v=1&z=https%3A%2F%2Fp47-content.icloud.com%3A443&x=1&a=CAogkifdSCbSrXRQUF2ha2_h398G7qtyErNTbG5u3qVhyZYSZxD_9IChjjIY_4uUpo4yIgEAUgS__tAJaiYLJFV538KzzNhaLQwyZxxUWv5C1Dulmf0BR03X-RyYejPFiUQs13ImXwNwEkYkO2l-BsXbAxNzFEd-ebhMhoe2BwLRZGVvHGZeqa0fEM4&e=1721825035&r=2854c5c7-2aab-4134-aec4-1941e6607b23-3&s=7GCzooXvEGM76Z33YAGZFAJtbzA',
+  'https://dgtzuqphqg23d.cloudfront.net/BCkVoJPaHNa9-ph1Sz5GetGOoashJMB6d5TWwejkRZ4-1536x2048.jpg',
+  'https://www.veja-store.com/media/lookbook/SS23/RUNNING/MOBILE/SS23_LOOKBOOK_RUNNINGLA_MOBILE_01.jpg',
   'https://dgtzuqphqg23d.cloudfront.net/WbrXEMGUNYeALkKdQc7mEN0-QKu4uwZgeICtCjg9n-s-2048x1536.jpg',
   'https://dgtzuqphqg23d.cloudfront.net/jMGJMupNLK86SD7QYdaXhcyL4X0IjRauHC596uvR3eA-2048x1536.jpg',
   'https://dgtzuqphqg23d.cloudfront.net/LXuhjiPCtiyasKPifrLtNN_588lwvGEKg91LI_yvxOY-2048x1536.jpg'
