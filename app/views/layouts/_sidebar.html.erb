@@ -13,10 +13,20 @@
       <i class="fa-solid fa-user-group fa-2x me-2" style="color: #7853DB;"></i>
       <%= @user.relationship_number %>
     </li>
-    <li class="d-flex align-items-center justify-content-between mb-4 px-4">
+  <div data-controller="dropdown">
+    <li class="d-flex align-items-center justify-content-between mb-4 px-4 --cursor-pointer" data-dropdown-target="head" data-action="click->dropdown#toggleList">
       <i class="fa-regular fa-handshake fa-2x me-2" style="color: #7853DB;"></i>
-      <%= @user.meeting_number %>
+      <%= @meetings.count %>
     </li>
+    <div class="meetings-list d-none dropdown-content mb-3" data-dropdown-target="list">
+      <% @meetings.each do |meeting| %>
+      <div class="d-flex justify-content-center my-2 meeting-display">
+        Le <%= meeting.date %>,
+        à <%= meeting.location %>
+      </div>
+      <% end %>
+    </div>
+  </div>
     <li class="d-flex align-items-center justify-content-between mb-4 px-4">
       <i class="fa-solid fa-person-running fa-2x me-2" style="color: #7853DB;"></i>
       <%= @user.running_pace_minute_and_second %> / km
