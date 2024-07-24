@@ -35,7 +35,7 @@
       <% end %>
     <div class="container">
       <% @relationships.each do |relationship| %>
-        <%= link_to "Let's talk", relationship_path(relationship), class: "btnchatroom" %>
+        <%= link_to "Let's talk !", relationship_path(relationship), class: "btnchatroom" %>
       <% end %>
     </div>
     </div>
@@ -98,7 +98,7 @@
               <%= f.label :location %>
               <%= f.text_field :location, class: 'form-control' %>
             </div>
-            <%= f.submit "Let's go for run !", class: "btnshowmeting"%>
+            <%= f.submit "Let's go for a run !", class: "btnshowmeting"%>
           <% end %>
         <% end %>
     <% end %>
