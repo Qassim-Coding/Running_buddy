@@ -1,5 +1,5 @@
 meta_product_name: "Running Buddy"
- meta_title: "Running Buddy - Find your running buddy !"
- meta_description: "Find your running buddy, close to wherever you are, as quickly as possible"
- meta_image: "running_buddy_cover_1260x630.png" # should exist in `app/assets/images/`
- twitter_account: "@product_twitter_account" # required for Twitter Cards
+meta_title: "Running Buddy - Find your running buddy !"
+meta_description: "Find your running buddy, close to wherever you are, as quickly as possible"
+meta_image: "running_buddy_cover_1260x630.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account" # required for Twitter Cards
