@@ -37,7 +37,10 @@ user1 = User.create!(
   relationship_number: 1,
   meeting_number: 2,
   latitude: 48.5387219,
-  longitude: 2.6605287
+  longitude: 2.6605287,
+  previous_run1: "Paris 10km",
+  previous_run2: "New Balance 30km"
+
 )
 file = File.open(user1.picture)
 user1.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
@@ -175,7 +178,9 @@ user4 = User.create!(
   relationship_number: 2,
   meeting_number: 3,
   latitude: 48.6618728,
-  longitude: 2.5695888
+  longitude: 2.5695888,
+  previous_run1: "Paris 10km",
+  previous_run2: "Strava 100km"
 )
 file = File.open(user4.picture)
 user4.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
@@ -221,7 +226,9 @@ user5 = User.create!(
   relationship_number: 15,
   meeting_number: 2,
   latitude: 48.531863,
-  longitude: 2.649412
+  longitude: 2.649412,
+  previous_run1: "Puma 25k Challenge",
+  previous_run2: "Strava 10km"
 )
 file = File.open(user5.picture)
 user5.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
@@ -267,7 +274,9 @@ user6 = User.create!(
   relationship_number: 14,
   meeting_number: 10,
   latitude: 48.5412579,
-  longitude: 2.6749157
+  longitude: 2.6749157,
+  previous_run1: "Strava half-marathon",
+  previous_run2: "Nike 10km"
 )
 file = File.open(user6.picture)
 user6.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
@@ -313,7 +322,9 @@ user7 = User.create!(
   relationship_number: 11,
   meeting_number: 21,
   latitude: 48.520947,
-  longitude: 2.677683
+  longitude: 2.677683,
+  previous_run1: "Paris 5 km",
+  previous_run2: "Lyon Marathon"
 )
 file = File.open(user7.picture)
 user7.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
@@ -359,7 +370,9 @@ user8 = User.create!(
   relationship_number: 2,
   meeting_number: 2,
   latitude: 48.543046627191,
-  longitude: 2.676467611037
+  longitude: 2.676467611037,
+  previous_run1: "Paris 10km",
+  previous_run2: "Strava 5km"
 )
 file = File.open(user8.picture)
 user8.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
@@ -405,7 +418,9 @@ user9 = User.create!(
   relationship_number: 10,
   meeting_number: 150,
   latitude: 48.516182000058,
-  longitude: 2.626078008966
+  longitude: 2.626078008966,
+  previous_run1: "Nike Running Challenge",
+  previous_run2: "Strava 10km"
 )
 file = File.open(user9.picture)
 user9.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
@@ -451,7 +466,9 @@ user10 = User.create!(
   relationship_number: 14,
   meeting_number: 10,
   latitude: 48.509906008146,
-  longitude: 2.666121964653
+  longitude: 2.666121964653,
+  previous_run1: "Paris 5 km",
+  previous_run2: "Strava 5km"
 )
 file = File.open(user10.picture)
 user10.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
@@ -497,7 +514,9 @@ user11 = User.create!(
   relationship_number: 2,
   meeting_number: 2,
   latitude: 48.532445993522,
-  longitude: 2.664300996188
+  longitude: 2.664300996188,
+  previous_run1: "Paris 10 km",
+  previous_run2: "Strava 10km"
 )
 file = File.open(user11.picture)
 user11.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
@@ -543,7 +562,9 @@ user12 = User.create!(
   relationship_number: 8,
   meeting_number: 3,
   latitude: 48.529626991846,
-  longitude: 2.654874037325
+  longitude: 2.654874037325,
+  previous_run1: "Lyon Marathon",
+  previous_run2: "Paris Marathon"
 )
 file = File.open(user12.picture)
 user12.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
@@ -589,7 +610,9 @@ user13 = User.create!(
   relationship_number: 4,
   meeting_number: 3,
   latitude: 48.529177062498,
-  longitude: 2.654663652684
+  longitude: 2.654663652684,
+  previous_run1: "Paris Marathon",
+  previous_run2: "Paris Half Marathon"
 )
 file = File.open(user13.picture)
 user13.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
