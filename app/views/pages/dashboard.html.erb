@@ -6,7 +6,7 @@
       <div class="search">
         <div class="card-deck">
           <% @users.each do |user| %>
-            <% unless user == current_user %>
+            <% unless user == current_user || @friends.include?(user) %>
               <div class="card suggestion-card shadow-lg">
                 <%= cl_image_tag user.avatar.key, crop: :fill, gravity: :face, class: 'card-img-top' %>
                 <div class="card-body">
