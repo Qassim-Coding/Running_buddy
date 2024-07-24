@@ -1,6 +1,6 @@
 require "open-uri"
 
-puts "Destroying all messages..."
+puts "Destroying all messages. prout..."
 Message.destroy_all
 
 puts "Destroying all user_meetings"
