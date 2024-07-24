@@ -23,8 +23,7 @@
     <% end %>
       <h1><%= @user.first_name %> <%= @user.last_name %> </h1>
       <p><%= @user.description %></p>
-    </div>
-    <div class="placementbutton">
+      <div class="placementbutton">
       <% unless current_user == @user  %>
         <% if @relationships_as_asker.empty? && @relationships_as_receiver.empty? %>
           <%= simple_form_for Relationship.new do |f| %>
@@ -34,6 +33,13 @@
             <%= f.button :submit, "Buddy up !", class: "btnshow overlay-text" %>
           <% end %>
       <% end %>
+    <div class="container">
+      <% @relationships.each do |relationship| %>
+        <%= link_to "Let's talk", relationship_path(relationship), class: "btnchatroom" %>
+      <% end %>
+    </div>
+    </div>
+
   </div>
   <div class="all">
     <div class="info">
@@ -86,6 +92,7 @@
             <div class="form-group">
               <%= f.label :date %>
               <%= f.datetime_select :date, class: 'form-control'%>
+              <%= f.input :date, as: :date, html5: true, input_html: { class: 'date-picker' } %>
             </div>
             <div class="form-group">
               <%= f.label :location %>
@@ -99,9 +106,4 @@
 </div>
 </div>
 </div>
-<div class="container">
-  <% @relationships.each do |relationship| %>
-        <%= link_to "Let's talk", relationship_path(relationship), class: "btnchatroom" %>
-      <% end %>
-  </div>
 </div>
