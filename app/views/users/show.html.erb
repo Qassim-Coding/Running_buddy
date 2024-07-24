@@ -15,7 +15,7 @@
   </div>
 
   <div class="infofinal">
-    <div class="runner_info">
+    <div class="runner_info avatar-container">
       <% if @user.avatar.attached? %>
       <%= cl_image_tag @user.avatar.key, class: "avatar" %>
     <% else %>
@@ -24,6 +24,17 @@
       <h1><%= @user.first_name %> <%= @user.last_name %> </h1>
       <p><%= @user.description %></p>
     </div>
+    <div class="placementbutton">
+      <% unless current_user == @user  %>
+        <% if @relationships_as_asker.empty? && @relationships_as_receiver.empty? %>
+          <%= simple_form_for Relationship.new do |f| %>
+            <div class="d-none">
+              <%= f.input :receiver_id, input_html: { value: @user.id } %>
+            </div>
+            <%= f.button :submit, "Buddy up !", class: "btnshow overlay-text" %>
+          <% end %>
+      <% end %>
+  </div>
   <div class="all">
     <div class="info">
 
@@ -69,17 +80,6 @@
         </div>
       </div>
 
-    <% unless current_user == @user  %>
-
-      <% if @relationships_as_asker.empty? && @relationships_as_receiver.empty? %>
-
-        <%= simple_form_for Relationship.new do |f| %>
-          <div class="d-none">
-            <%= f.input :receiver_id, input_html: { value: @user.id } %>
-          </div>
-          <%= f.button :submit, "Create Relationship", class: "btnshow" %>
-        <% end %>
-      <% end %>
     <div class= "relation-container">
         <% @relationships.each do |relationship| %>
           <%= simple_form_for([relationship, Meeting.new]) do |f| %>
@@ -91,7 +91,7 @@
               <%= f.label :location %>
               <%= f.text_field :location, class: 'form-control' %>
             </div>
-            <%= f.submit 'Create Meeting', class: "btnshowmeting"%>
+            <%= f.submit "Let's go for run !", class: "btnshowmeting"%>
           <% end %>
         <% end %>
     <% end %>
