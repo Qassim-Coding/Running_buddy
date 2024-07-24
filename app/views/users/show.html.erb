@@ -24,12 +24,12 @@
       <h1><%= @user.first_name %> <%= @user.last_name %> </h1>
       <p><%= @user.description %></p>
     </div>
-
+  <div class="all">
     <div class="info">
 
       <div class="runner-details">
         <div class="runner-detail">
-          <i class="fa-solid fa-map-location-dot fa-2x" style="color: #7853DB;"></i>
+          <i class="fa-solid fa-map-location-dot fa-2x iconshow" style="color: #7853DB;"></i>
           <p class="info"><%= @user.address %></p>
         </div>
         <div class="runner-detail">
@@ -37,86 +37,75 @@
           <p class="info"><%= @user.running_pace_minute_and_second %> / km</p>
         </div>
         <div class="runner-detail">
-          <i class="fa-regular fa-clipboard fa-2x" style="color: #7853DB;"></i>
+          <i class="fa-regular fa-clipboard fa-2x iconshow" style="color: #7853DB;"></i>
           <p class="info"><%= @user.preparation %></p>
         </div>
         <div class="runner-detail">
-          <i class="fa-solid fa-fire-flame-curved fa-2x" style="color: #7853DB;"></i>
+          <i class="fa-solid fa-fire-flame-curved fa-2x iconshow" style="color: #7853DB;"></i>
           <p class="info"><%= @user.other_sport %></p>
         </div>
         <div class="runner-detail">
-          <i class="fa-solid fa-chart-line fa-2x" style="color: #7853DB;"></i>
+          <i class="fa-solid fa-chart-line fa-2x iconshow" style="color: #7853DB;"></i>
           <p class="info"><%= @user.run_frequency %></p>
         </div>
         <div class="runner-detail">
-          <i class="fa-solid fa-bullseye fa-2x" style="color: #7853DB;"></i>
-          <p class="info"><%= @user.next_official_running_event %></p>
-        </div>
-      </div>
-
-
-
-      <div class="rsection container">
-        <div class="preference">
           <i class="fa-regular fa-calendar fa-2x" style="color: #7853DB;"></i>
           <p class="info"><%= @user.preference_date %></p>
         </div>
-        <div class="preference">
-          <i class="fa-regular fa-clock fa-2x" style="color: #7853DB;"></i>
-          <p class="info"><%= @user.preference_hour %></p>
+        <div class="runner-detail">
+          <i class="fa-regular fa-calendar fa-2x iconshow" style="color: #7853DB;"></i>
+          <p class="info"><%= @user.preference_date%></p>
+        </div><div class="runner-detail">
+          <i class="fa-regular fa-clock fa-2x iconshow" style="color: #7853DB;"></i>
+          <p class="info"><%= @user.preference_hour%></p>
+        </div><div class="runner-detail">
+          <i class="fa-solid fa-bullseye fa-2x iconshow" style="color: #7853DB;"></i>
+          <p class="info"><%= @user.next_official_running_event%></p>
         </div>
-
-
-      <div class="Medals-container">
-        <div class="Medal">
-          <i class="fa-solid fa-medal fa-2x" style="color: #7853DB;"></i>
-          <p class="info"><%= @user.next_official_running_event %></p>
+        <div class="runner-detail">
+          <i class="fa-solid fa-medal fa-2x iconshow" style="color: #7853DB;"></i>
+          <p class="info"><%= @user.previous_run1%></p>
         </div>
-        <div class="Medal">
-          <i class="fa-solid fa-medal fa-2x" style="color: #7853DB;"></i>
-          <p class="info"><%= @user.next_official_running_event %></p>
+        <div class="runner-detail">
+          <i class="fa-solid fa-medal fa-2x iconshow" style="color: #7853DB;"></i>
+          <p class="info"><%= @user.previous_run2%></p>
+        </div>
         </div>
       </div>
-      </div>
 
-    </div>
+    <% unless current_user == @user  %>
 
-  </div>
+      <% if @relationships_as_asker.empty? && @relationships_as_receiver.empty? %>
 
-  <% unless current_user == @user  %>
-
-    <% if @relationships_as_asker.empty? && @relationships_as_receiver.empty? %>
-
-      <%= simple_form_for Relationship.new do |f| %>
-        <div class="d-none">
-          <%= f.input :receiver_id, input_html: { value: @user.id } %>
-        </div>
-        <%= f.button :submit, "Create Relationship", class: "btnshow" %>
-      <% end %>
-    <% end %>
-  <div class= "relation-container">
-      <% @relationships.each do |relationship| %>
-        <%= simple_form_for([relationship, Meeting.new]) do |f| %>
-          <div class="form-group">
-            <%= f.label :date %>
-            <%= f.datetime_select :date, class: 'form-control' %>
+        <%= simple_form_for Relationship.new do |f| %>
+          <div class="d-none">
+            <%= f.input :receiver_id, input_html: { value: @user.id } %>
           </div>
-
-          <div class="form-group">
-            <%= f.label :location %>
-            <%= f.text_field :location, class: 'form-control' %>
-          </div>
-          <%= f.submit 'Create Meeting', class: "btnshowmeting"%>
+          <%= f.button :submit, "Create Relationship", class: "btnshow" %>
         <% end %>
       <% end %>
-
-
-      <% @relationships.each do |relationship| %>
-        <%= link_to "Go to Chatroom", relationship_path(relationship), class: "btnshowmeting" %>
-      <% end %>
-
-
+    <div class= "relation-container">
+        <% @relationships.each do |relationship| %>
+          <%= simple_form_for([relationship, Meeting.new]) do |f| %>
+            <div class="form-group">
+              <%= f.label :date %>
+              <%= f.datetime_select :date, class: 'form-control'%>
+            </div>
+            <div class="form-group">
+              <%= f.label :location %>
+              <%= f.text_field :location, class: 'form-control' %>
+            </div>
+            <%= f.submit 'Create Meeting', class: "btnshowmeting"%>
+          <% end %>
+        <% end %>
     <% end %>
-  </div>
 
+</div>
+</div>
+</div>
+<div class="container">
+  <% @relationships.each do |relationship| %>
+        <%= link_to "Let's talk", relationship_path(relationship), class: "btnchatroom" %>
+      <% end %>
+  </div>
 </div>

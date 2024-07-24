@@ -11,7 +11,11 @@ class PagesController < ApplicationController
     @meetings = Meeting.where(user_id: @user.id)
     # l'utilisateur connecté peut voir ses relations
     @relationships = Relationship.where(asker_id: @user.id)
+    @friends = @relationships.map { |r| r.receiver}
+    @relationships += Relationship.where(receiver_id: @user.id)
     # permet d'afficher toutes les cartes des Users -> itération de mes cards.
+    @friends << Relationship.where(receiver_id: @user.id).map { |r| r.asker}
+    @friends = @friends.flatten
     @users = User.all
         # permet d'afficher toutes les cartes des Users -> itération de mes cards.
     # permet de filtrer les Users en fonction de leur running_pace

@@ -8,8 +8,8 @@ export default class extends Controller {
     console.log(this.element.innerText.trim())
     if (this.element.innerText.trim() === 'relationship accepted!') {
       Swal.fire({
-        title: "Relationship accepted",
-        text: "",
+        title: "New Running Buddy",
+        text: "🥳 Congratulations you are now Running Buddies! You can schedule meetings and talk to eachother! 🥳",
         icon: "success"
       });
     }
