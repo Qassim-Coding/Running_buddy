@@ -27,7 +27,6 @@
   <div class="all">
     <div class="info">
 
-
       <div class="runner-details">
         <div class="runner-detail">
           <i class="fa-solid fa-map-location-dot fa-2x iconshow" style="color: #7853DB;"></i>
@@ -54,23 +53,29 @@
           <p class="info"><%= @user.preference_date %></p>
         </div>
         <div class="runner-detail">
-          <i class="fa-regular fa-clock fa-2x" style="color: #7853DB;"></i>
-          <p class="info"><%= @user.preference_hour %> PM</p>
+          <i class="fa-regular fa-calendar fa-2x iconshow" style="color: #7853DB;"></i>
+          <p class="info"><%= @user.@user.preference_date%></p>
+        </div><div class="runner-detail">
+          <i class="fa-regular fa-clock fa-2x iconshow" style="color: #7853DB;"></i>
+          <p class="info"><%= @user.@user.preference_houre%></p>
+        </div><div class="runner-detail">
+          <i class="fa-solid fa-medal fa-2x iconshow" style="color: #7853DB;"></i>
+          <p class="info"><%= @user.next_official_running_event%></p>
+        </div>
+        </div><div class="runner-detail">
+          <i class="fa-solid fa-medal fa-2x iconshow" style="color: #7853DB;"></i>
+          <p class="info"><%= @user.previous_run1%></p>
         </div>
         <div class="runner-detail">
-          <i class="fa-solid fa-bullseye fa-2x" style="color: #7853DB;"></i>
-          <p class="info"><%= @user.next_official_running_event  %></p>
-        </div>
-        <div class="runner-detail">
-          <i class="fa-solid fa-medal fa-2x" style="color: #7853DB;"></i>
-          <p class="info"><%= @user.next_official_running_event %></p>
-        </div>
-        <div class="runner-detail">
-          <i class="fa-solid fa-medal fa-2x" style="color: #7853DB;"></i>
-          <p class="info"><%= @user.next_official_running_event %></p>
+          <i class="fa-solid fa-medal fa-2x iconshow" style="color: #7853DB;"></i>
+          <p class="info"><%= @user.previous_run2%></p>
+
         </div>
       </div>
       </div>
+    </div>
+    </div>
+
     <% unless current_user == @user  %>
 
       <% if @relationships_as_asker.empty? && @relationships_as_receiver.empty? %>
