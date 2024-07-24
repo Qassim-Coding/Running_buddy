@@ -19,12 +19,13 @@ class SearchesController < ApplicationController
       @users = @users.where(sql_subquery, query: "%#{query}%")
       end
     end
+
     @markers = @users.geocoded.map do |user|
       {
         lat: user.latitude,
         lng: user.longitude,
         info_window_html: render_to_string(partial: "pages/info_window", locals: { user: user }),
-        marker_html: render_to_string(partial: "pages/marker")
+        marker_html: render_to_string(partial: "pages/marker", locals: { user: user })
       }
     end
   end
