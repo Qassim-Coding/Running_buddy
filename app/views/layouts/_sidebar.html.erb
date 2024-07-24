@@ -18,9 +18,9 @@
         <% @relationships.each do |relationship| %>
         <div class="d-flex justify-content-center my-2 meeting-display">
           <% if relationship.asker == current_user %>
-          <%= relationship.receiver.first_name %> <%= relationship.receiver.last_name %>
+            <%= link_to "#{relationship.receiver.first_name} #{relationship.receiver.last_name}", user_path(relationship.receiver), class: 'text-decoration-none text-dark' %>
           <% else %>
-          <%= relationship.asker.first_name %> <%= relationship.asker.last_name %>
+            <%= link_to "#{relationship.asker.first_name} #{relationship.asker.last_name}", user_path(relationship.asker), class: 'text-decoration-none text-dark' %>
           <% end %>
 
         </div>
