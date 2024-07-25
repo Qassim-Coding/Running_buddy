@@ -40,10 +40,9 @@
     </div>
     </div>
   </div>
-
-  <div id="scrollDownArrow" class="scroll-arrow">
-    <i class="fa-solid fa-arrow-down fa-2x iconshow" style="color: #7853DB;"></i>
-  </div>
+  <%= link_to '#scroll', id:"scrollDownArrow", class:"scroll-arrow" do %>
+     <i class="fa-solid fa-arrow-down fa-2x" style="color: #7853DB;"></i>
+  <% end %>
 
   <div class="all">
     <div class="info">
@@ -51,7 +50,7 @@
       <div class="runner-details">
         <div class="runner-detail">
           <i class="fa-solid fa-map-location-dot fa-2x iconshow" style="color: #7853DB;" data-toggle="tooltip" data-placement="bottom" title="Location"></i>
-          <p class="info"><%= @user.address %></p>
+          <p class="info" id="scroll"><%= @user.address %></p>
         </div>
         <div class="runner-detail">
           <i class="fa-solid fa-person-running fa-2x" style="color: #7853DB;" data-toggle="tooltip" data-placement="bottom" title="Running time"></i>
