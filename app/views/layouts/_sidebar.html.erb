@@ -35,7 +35,7 @@
       <div class="meetings-list d-none dropdown-content mb-3" data-dropdown-target="list">
         <% @meetings.each do |meeting| %>
         <div class="d-flex justify-content-center my-2 meeting-display">
-          <%= meeting.date %>,
+          <%= meeting.date %>, <%= meeting.time.strftime("%H:%M") %>
           in <%= meeting.location %>
         </div>
         <% end %>
