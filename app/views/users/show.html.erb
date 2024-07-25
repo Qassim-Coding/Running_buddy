@@ -45,15 +45,10 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                 <%= render "relationships/show",  relationship: relationship %>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
               </div>
             </div>
           </div>
@@ -62,9 +57,10 @@
     </div>
     </div>
   </div>
-  <%= link_to '#scroll', id:"scrollDownArrow", class:"scroll-arrow" do %>
-     <i class="fa-solid fa-arrow-down fa-2x" style="color: #7853DB;"></i>
-  <% end %>
+
+  <div id="scrollDownArrow" class="scroll-arrow">
+    <i class="fa-solid fa-arrow-down fa-2x iconshow" style="color: #7853DB;"></i>
+  </div>
 
   <div class="all">
     <div class="info">
@@ -72,7 +68,7 @@
       <div class="runner-details">
         <div class="runner-detail">
           <i class="fa-solid fa-map-location-dot fa-2x iconshow" style="color: #7853DB;" data-toggle="tooltip" data-placement="bottom" title="Location"></i>
-          <p class="info" id="scroll"><%= @user.address %></p>
+          <p class="info"><%= @user.address %></p>
         </div>
         <div class="runner-detail">
           <i class="fa-solid fa-person-running fa-2x" style="color: #7853DB;" data-toggle="tooltip" data-placement="bottom" title="Running time"></i>
@@ -95,7 +91,7 @@
           <p class="info"><%= @user.preference_date%></p>
         </div><div class="runner-detail">
           <i class="fa-regular fa-clock fa-2x iconshow" style="color: #7853DB;" data-toggle="tooltip" data-placement="bottom" title="Preference hour"></i>
-          <p class="info"><%= @user.preference_hour%> pm</p>
+          <p class="info"><%= @user.preference_hour%></p>
         </div><div class="runner-detail">
           <i class="fa-solid fa-bullseye fa-2x iconshow" style="color: #7853DB;" data-toggle="tooltip" data-placement="bottom" title="Next official running event"></i>
           <p class="info"><%= @user.next_official_running_event%></p>
