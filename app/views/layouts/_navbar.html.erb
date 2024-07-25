@@ -5,7 +5,7 @@
       <% end %>
 
     <div class="search-bar">
-      <%= form_with url: search_path, method: :get, local: true do |form| %>
+      <%= form_with url: search_path, method: :get, local: true, class: "search_loop" do |form| %>
         <%= form.text_field :query, placeholder: 'Search...', class: 'search-input' %>
         <span class="search-icon">
           <%= image_tag 'Search_lens_icon.png'%>
