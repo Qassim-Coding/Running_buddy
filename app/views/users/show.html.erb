@@ -94,8 +94,6 @@
         <% @relationships.each do |relationship| %>
           <%= simple_form_for([relationship, Meeting.new]) do |f| %>
             <div class="form-group">
-              <%= f.label :date %>
-              <%= f.datetime_select :date, class: 'form-control'%>
               <%= f.input :date, as: :date, html5: true, input_html: { class: 'date-picker' } %>
               <%= f.input :time, as: :time, html5: true, input_html: { class: 'time-picker' } %>
             </div>
