@@ -13,13 +13,13 @@
                   <div class="card-body">
                     <h4 class="card-title"><%= user.first_name%> <%=user.last_name %></h4>
                     <p class="card-text">
-                      <%= image_tag 'carte.png', class: 'emoticon' data-toggle="tooltip" data-placement="bottom" title="Adress" %> <%= user.address.split(',')[1].strip %>
+                      <%= image_tag 'carte.png', class: 'emoticon' %> <%= user.address.split(',')[1].strip %>
                     </p>
                     <p class="card-text">
-                      <%= image_tag 'sport (1).png', class: 'emoticon' data-toggle="tooltip" data-placement="bottom" title="Running time" %> <%= user.running_pace_minute_and_second %> / km
+                      <%= image_tag 'sport (1).png', class: 'emoticon' %> <%= user.running_pace_minute_and_second %> / km
                     </p>
                     <p class="card-text">
-                      <%= image_tag 'stylo.png', class: 'emoticon' data-toggle="tooltip" data-placement="bottom" title="Description" %> <%= user.description %>
+                      <%= image_tag 'stylo.png', class: 'emoticon' %> <%= user.description %>
                   </div>
                 </div>
               <% end %>
