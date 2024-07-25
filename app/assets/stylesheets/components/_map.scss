@@ -1,22 +1,39 @@
 .mapboxgl-popup {
-  max-width: 200px;
+  max-width: 300px;
 }
 
 .mapboxgl-popup-content {
   text-align: center;
   font-family: "Open Sans", sans-serif;
   border: none;
-  padding: 0;
+  padding: 10px;
   margin: 0;
   border-radius: 20px;
   color: #7853DB;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .markerphoto {
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  height: 55px;
+  width: 55px;
 }
 
+.fname_markerphoto {
+  font-size: 20px;
+  margin: 0;
+}
 
-/*  .fname_markerphoto */
+.marker_info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.marker_info li {
+  margin: 0;
+  padding: 0;
+}
