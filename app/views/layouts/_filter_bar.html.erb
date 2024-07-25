@@ -1,18 +1,20 @@
 <div class="filter-bar">
-   <div class="filter-button">
+  <div class="filter-button">
     <%= link_to dashboard_path(sort: 'city_asc'), class: 'sort-button' do %>
-      City <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up arrow-icon"></i>
     <% end %>
+    <span class="filter-text">City</span>
     <%= link_to dashboard_path(sort: 'city_desc'), class: 'sort-button' do %>
-      City <i class="fas fa-arrow-down"></i>
+      <i class="fas fa-arrow-down arrow-icon"></i>
     <% end %>
   </div>
   <div class="filter-button">
     <%= link_to dashboard_path(sort: 'pace_asc'), class: 'sort-button' do %>
-     Pace <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up arrow-icon"></i>
     <% end %>
+    <span class="filter-text">Pace</span>
     <%= link_to dashboard_path(sort: 'pace_desc'), class: 'sort-button' do %>
-     Pace <i class="fas fa-arrow-down"></i>
+      <i class="fas fa-arrow-down arrow-icon"></i>
     <% end %>
   </div>
 </div>
