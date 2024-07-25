@@ -7,9 +7,9 @@ export default class extends Controller {
   static targets = ["messages", "messageInput", "messageForm"]
 
   connect() {
-    console.log(this.chatroomIdValue)
+/*     console.log(this.chatroomIdValue)
     console.log(this.messagesTarget)
-    this.subscription = createConsumer().subscriptions.create(
+ */    this.subscription = createConsumer().subscriptions.create(
       { channel: "ChatroomChannel", id: this.chatroomIdValue },
       { received: data => this.#insertMessageAndScrollDown(data) }
     )
@@ -34,8 +34,8 @@ export default class extends Controller {
   }
 
   #insertMessageAndScrollDown(data) {
-    console.log(data)
-    const currentUserIsSender = this.currentUserIdValue === data.sender_id
+/*     console.log(data)
+ */    const currentUserIsSender = this.currentUserIdValue === data.sender_id
     const messageElement = this.#buildMessageElement(currentUserIsSender, data.message)
     this.messagesTarget.insertAdjacentHTML("beforeend", messageElement)
     this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
@@ -68,7 +68,7 @@ export default class extends Controller {
     }
   }
 
-  resetForm() {
+  resetForm() { console.log(this.messageInputTarget)
     this.messageInputTarget.value = ""
   }
 
