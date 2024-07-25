@@ -1,0 +1,29 @@
+<div class="container chatroom shadow-lg" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= relationship.id %>" data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
+  <div class="d-flex justify-content-between align-items-center">
+    <%= link_to user_path(relationship.receiver) do %>
+      <% if relationship.receiver == current_user %>
+      <%= cl_image_tag relationship.asker.avatar.key, class: "avatar-chatroom mb-2" %>
+      <% else %>
+      <%= cl_image_tag relationship.receiver.avatar.key, class: "avatar-chatroom mb-2" %>
+      <% end %>
+    <% end %>
+  <h1>Chatroom</h1>
+</div>
+
+  <div class="messages-container" data-chatroom-subscription-target="messages">
+    <% relationship.messages.each do |message| %>
+      <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
+        <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
+          <%= render "messages/message", message: message %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+<%= simple_form_for [relationship, Message.new], html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex", data: { chatroom_subscription_target: "messageForm" } } do |f| %>
+    <%= f.input :content, label: false, wrapper_html: { class: "flex-grow-1" }, input_html: { placeholder: 'Write your message here...', data: { chatroom_subscription_target: "messageInput", action: "keydown->chatroom-subscription#handleKeydown" } } %>
+    <button type="submit" class="btn btn-purple mb-4 px-4">
+      <i class="fa fa-paper-plane fa-2x" aria-hidden="true"></i>
+    </button>
+  <% end %>
+</div>
