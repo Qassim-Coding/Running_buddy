@@ -120,7 +120,7 @@ user3 = User.create!(
   first_name: "Corentin",
   address: "113 avenue des charmettes, Le-mée-sur-seine",
   picture: "app/assets/images/4corentinducros.jpg",
-  description: "New to running, looking for a group to join.",
+  description: "Looking for a group to join.",
   phone_number: "+33 7 22 45 55 89",
   running_pace: 480,
   next_official_running_event: "5K Fun Run",
