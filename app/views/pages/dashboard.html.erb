@@ -9,14 +9,14 @@
             <% unless user == current_user || @friends.include?(user) %>
               <%= link_to user_path(user), class: "card-link" do %>
                 <div class="card suggestion-card shadow-lg">
-                  <%= cl_image_tag user.avatar.key, crop: :fill, gravity: :face, class: 'card-img-top' %>
+                  <%= cl_image_tag user.avatar.key, gravity: :face, class: 'card-img-top' %>
                   <div class="card-body">
                     <h4 class="card-title"><%= user.first_name%> <%=user.last_name %></h4>
                     <p class="card-text">
                       <%= image_tag 'carte.png', class: 'emoticon' %> <%= user.address.split(',')[1].strip %>
                     </p>
                     <p class="card-text">
-                      <%= image_tag 'sport (1).png', class: 'emoticon' %> <%= user.running_pace_minute_and_second %> / <span style="font-size:0.8em">km</span>
+                      <%= image_tag 'sport (1).png', class: 'emoticon' %> <%= user.running_pace_minute_and_second %> / km
                     </p>
                     <p class="card-text">
                       <%= image_tag 'stylo.png', class: 'emoticon' %> <%= user.description %>
