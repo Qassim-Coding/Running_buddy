@@ -18,13 +18,13 @@ User.delete_all
 puts "creating users genial"
 
 user1 = User.create!(
-  email: "valentin.letanneur@gmail.com",
+  email: "valentin.letanneur@example.com",
   password: '123456',
   last_name: "Le Tanneur",
   first_name: "Valentin",
   address: "10 rue guy baudoin, Melun",
   picture: "app/assets/images/valentinletanneur.jpg",
-  description: "Experienced runner looking for training partners.",
+  description: "Looking for training partners.",
   phone_number: "+33 1 23 46 67 89",
   running_pace: 410,
   next_official_running_event: "City Marathon",
@@ -40,7 +40,6 @@ user1 = User.create!(
   longitude: 2.6605287,
   previous_run1: "Paris 10km",
   previous_run2: "New Balance 30km"
-
 )
 file = File.open(user1.picture)
 user1.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
@@ -61,7 +60,7 @@ pictures1.each do |picture|
 end
 
 user2 = User.create!(
-  email: "alexandra.durand@gmail.com",
+  email: "alexandra.durand@example.com",
   password: '123456',
   password_confirmation: '123456',
   reset_password_token: nil,
@@ -73,7 +72,7 @@ user2 = User.create!(
   first_name: "Alexandra",
   address: "43b avenue thiers, Melun",
   picture: "app/assets/images/alexandradurand.jpg",
-  description: "Marathon runner looking to improve my pace.",
+  description: "Looking to improve my pace.",
   phone_number: "+33 1 23 45 55 89",
   running_pace: 420,
   next_official_running_event: "Half Marathon",
@@ -86,7 +85,9 @@ user2 = User.create!(
   relationship_number: 2,
   meeting_number: 1,
   latitude: 48.529797,
-  longitude: 2.654954
+  longitude: 2.654954,
+  previous_run1: "Paris 10km",
+  previous_run2: "Strava 100km"
 )
 file = File.open(user2.picture)
 user2.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
@@ -107,7 +108,7 @@ pictures2.each do |picture|
 end
 
 user3 = User.create!(
-  email: "corentin.ducros@gmail.com",
+  email: "corentin.ducros@example.com",
   password: '123456',
   password_confirmation: '123456',
   reset_password_token: nil,
@@ -132,7 +133,9 @@ user3 = User.create!(
   relationship_number: 5,
   meeting_number: 4,
   latitude: 48.540578,
-  longitude: 2.644153
+  longitude: 2.644153,
+  previous_run1: "Paris 5km",
+  previous_run2: "Strava 10km"
 )
 file = File.open(user3.picture)
 user3.avatar.attach(io: file, filename: "nes.png", content_type: "image/png")
@@ -153,7 +156,7 @@ pictures3.each do |picture|
 end
 
 user4 = User.create!(
-  email: "fred.sousa@gmail.com",
+  email: "fred.sousa@example.com",
   password: '123456',
   password_confirmation: '123456',
   reset_password_token: nil,
@@ -165,7 +168,7 @@ user4 = User.create!(
   first_name: "Fred",
   address: "16 rue de moissy, Combs-la-ville",
   picture: "app/assets/images/fredsousa.jpg",
-  description: "Passionate runner aiming to compete in marathons.",
+  description: "Aiming to compete in marathons.",
   phone_number: "+33 1 23 45 67 89",
   running_pace: 410,
   next_official_running_event: "Paris Marathon",
@@ -201,7 +204,7 @@ pictures4.each do |picture|
 end
 
 user5 = User.create!(
-  email: "jeanne.julia@gmail.com",
+  email: "jeanne.julia@example.com",
   password: '123456',
   password_confirmation: '123456',
   reset_password_token: nil,
@@ -249,7 +252,7 @@ pictures5.each do |picture|
 end
 
 user6 = User.create!(
-  email: "antoine.martin@gmail.com",
+  email: "antoine.martin@example.com",
   password: '123456',
   password_confirmation: '123456',
   reset_password_token: nil,
@@ -297,7 +300,7 @@ pictures6.each do |picture|
 end
 
 user7 = User.create!(
-  email: "lucie.dubois@gmail.com",
+  email: "lucie.dubois@example.com",
   password: '123456',
   password_confirmation: '123456',
   reset_password_token: nil,
@@ -345,7 +348,7 @@ pictures7.each do |picture|
 end
 
 user8 = User.create!(
-  email: "killian.leblanc@gmail.com",
+  email: "killian.leblanc@example.com",
   password: '123456',
   password_confirmation: '123456',
   reset_password_token: nil,
@@ -357,7 +360,7 @@ user8 = User.create!(
   first_name: "Killian",
   address: "3 rue Claude Bernard, Melun",
   picture: "app/assets/images/2killianlebalnc.jpg",
-  description: "Casual runner aiming to complete a marathon.",
+  description: "Aiming to complete a marathon.",
   phone_number: "+33 4 91 23 45 67",
   running_pace: 530,
   next_official_running_event: "Marseille Marathon",
@@ -393,7 +396,7 @@ pictures8.each do |picture|
 end
 
 user9 = User.create!(
-  email: "henry.moreau@gmail.com",
+  email: "henry.moreau@example.com",
   password: '123456',
   password_confirmation: '123456',
   reset_password_token: nil,
@@ -405,7 +408,7 @@ user9 = User.create!(
   first_name: "Henry",
   address: "824 Av. du Lys,Dammarie-les-Lys",
   picture: "app/assets/images/2hernymoreau.JPG",
-  description: "Competitive runner with a focus on half marathons.",
+  description: "Focusing on half marathons.",
   phone_number: "+33 4 78 34 56 78",
   running_pace: 620,
   next_official_running_event: "Lyon Half Marathon",
@@ -441,7 +444,7 @@ pictures9.each do |picture|
 end
 
 user10 = User.create!(
-  email: "claire.rohand@gmail.com",
+  email: "claire.rohand@example.com",
   password: '123456',
   password_confirmation: '123456',
   reset_password_token: nil,
@@ -489,7 +492,7 @@ pictures10.each do |picture|
 end
 
 user11 = User.create!(
-  email: "pierre.perrin@gmail.com",
+  email: "pierre.perrin@example.com",
   password: '123456',
   password_confirmation: '123456',
   reset_password_token: nil,
@@ -537,7 +540,7 @@ pictures11.each do |picture|
 end
 
 user12 = User.create!(
-  email: "roxanne.petit@gmail.com",
+  email: "roxanne.petit@example.com",
   password: '123456',
   password_confirmation: '123456',
   reset_password_token: nil,
@@ -585,7 +588,7 @@ pictures12.each do |picture|
 end
 
 user13 = User.create!(
-  email: "manuel.loutoby@gmail.com",
+  email: "manuel.loutoby@example.com",
   password: '123456',
   password_confirmation: '123456',
   reset_password_token: nil,
@@ -619,10 +622,10 @@ user13.avatar.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 user13.save
 
 pictures13 = [
-  'https://dgtzuqphqg23d.cloudfront.net/J4an4cYTt_pGqgfBJxneJkUJ0rQpQmOw2WUDqc8UVuM-1536x2048.jpg',
+  'https://dgtzuqphqg23d.cloudfront.net/NIeyKvrVMvhuxJmdqe-JmVOqnfOKS8ICnrdabitQlrQ-1536x2048.jpg',
   'https://dgtzuqphqg23d.cloudfront.net/O4D6S2JS2qSlrRLyTC5IOH27ttmpGqtTfa6AuEs0Rug-1536x2048.jpg',
   'https://dgtzuqphqg23d.cloudfront.net/E0u93A_-ENgPKLEB7gVwa-38HF-eR4iSsRPl_13FuGQ-2048x1367.jpg',
-  'https://dgtzuqphqg23d.cloudfront.net/mSORkHtx108fjbrmBeOpnsr3RRA9MfyUpc5TECXt14c-2048x1365.jpg',
+  'https://dgtzuqphqg23d.cloudfront.net/BioFLOYjtvxs9Y-EHcJuayGAgnR7HdP7VMox7SXd70E-2048x1365.jpg',
   'https://dgtzuqphqg23d.cloudfront.net/sDEWuBwJ9iGUX6b5R8-JydmHZ39vHoWUWivRKufzEhk-1365x2048.jpg'
 ]
 
