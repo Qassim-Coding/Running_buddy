@@ -230,3 +230,21 @@ button:hover{
   margin-top: 20px;
   text-align: center; /* Centrer le bouton */
 }
+
+.scroll-arrow {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000; /* Assurez-vous que la flèche est au-dessus des autres éléments */
+}
+
+.scroll-arrow img {
+  width: 50px; /* Ajustez la taille selon vos besoins */
+  height: 50px;
+  transition: transform 0.2s;
+}
+
+.scroll-arrow img:hover {
+  transform: scale(1.1); /* Agrandir légèrement au survol */
+}
