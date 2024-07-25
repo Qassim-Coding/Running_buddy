@@ -21,7 +21,7 @@
     <% else %>
       <%= image_tag "janesmith.jpg", class: "avatar" %>
     <% end %>
-      <h1><%= @user.first_name %> <%= @user.last_name %> </h1>
+      <h1> <%= @user.first_name %> <%= @user.last_name %> <i class="fa-solid fa-bolt" style="color: #FFB200;"> </i> </h1>
       <p><%= @user.description %></p>
       <div class="placementbutton">
       <% unless current_user == @user  %>
